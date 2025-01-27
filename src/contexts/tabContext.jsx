@@ -1,8 +1,8 @@
 import { createContext } from 'react'
 import { useState, useCallback } from 'react'
-import { tabsEnum, tabsMap } from '../utils/tabsMap'
+import { tabsContent } from '../utils/tabs'
 
-const initialTabs = [tabsMap.get(tabsEnum.home)]
+const initialTabs = [tabsContent.home, tabsContent.about]
 
 export const TabContext = createContext()
 
