@@ -1,16 +1,8 @@
 import { createContext } from 'react'
 import { useState, useCallback } from 'react'
+import { tabsEnum, tabsMap } from '../utils/tabsMap'
 
-const initialTabs = [
-  { name: 'Home', type: 'file', extension: 'js' },
-  { name: 'Teste', type: 'file', extension: 'js' },
-  {
-    name: 'Teste2',
-    type: 'file',
-    extension: 'js',
-    component: <div>Place holder</div>
-  }
-]
+const initialTabs = [tabsMap.get(tabsEnum.home)]
 
 export const TabContext = createContext()
 
