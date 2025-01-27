@@ -2,9 +2,11 @@ import { FileIcon } from './FileIcon'
 
 export function File({ name, extension }) {
   return (
-    <div className="flex align-center text-base">
+    <div className="flex items-center justify-center text-sm">
       <FileIcon fileType={extension} />
-      {name}.{extension}
+      <span>
+        {name}.{extension}
+      </span>
     </div>
   )
 }

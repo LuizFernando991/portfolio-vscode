@@ -21,7 +21,13 @@ export function Tab({ tab }) {
       <span
         data-tab={`${tab.name}`}
         onClick={() => tabs.switchTabs(tab)}
-        className="w-full h-full  flex justify-between items-center cursor-pointer"
+        className={classNames(
+          'w-full h-full flex justify-between items-center cursor-pointer',
+          {
+            'text-white': selected,
+            'text-white-50a': !selected
+          }
+        )}
       >
         <File name={tab.name} extension={tab.extension} />
       </span>
