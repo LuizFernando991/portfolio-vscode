@@ -40,6 +40,8 @@
   --color-white-10a: hsla(0,0%,100%,.1);
   --color-white-5a: hsla(0,0%,100%,.05);
   --color-pink: #ff79c6;
+  --color-soft-blue: #8ce1e9;
+  --color-yellow: #e7e26d;
 
   --font-sans: 'SF Pro Display', Roboto, serif, Arial;
   --font-mono: Menlo, 'Fira Mono', 'Courier New';

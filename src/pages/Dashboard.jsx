@@ -19,7 +19,7 @@ export function Dashboard() {
         {tabs.current ? (
           <div
             ref={tabRef}
-            className="font-mono pt-[32px] pb-[100px] px-4 md:px-9 overflow-y-auto flex-1"
+            className="font-mono pt-2 pb-[100px] px-2 overflow-y-auto flex-1"
           >
             <div className="max-w-[1200px]">{tabs.current.component}</div>
           </div>
