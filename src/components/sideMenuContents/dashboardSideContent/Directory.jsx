@@ -24,10 +24,10 @@ export function Directory({ directory, level }) {
         <>
           <DisclosureButton
             className={classNames(
-              'w-full py-1 outline-none focus:shadow-item-selected focus:bg-white-5a focus:z-20 relative cursor-pointer',
-              level === 0
-                ? 'bg-white-5a font-bold'
-                : 'hover:bg-white-5a font-medium'
+              'w-full py-1 outline-none focus:shadow-item-selected focus:bg-white-5a focus:z-20 relative cursor-pointer hover:bg-white-5a font-medium',
+              {
+                'pt-2': level === 0
+              }
             )}
             style={{ paddingLeft: paddingLeft }}
             onClick={() =>
