@@ -53,7 +53,12 @@ function Item({ name, url, display, icon }) {
         </div>
         <div>
           <span className="text-soft-blue">&quot;url&quot;</span>:{' '}
-          <a className="text-yellow" target="_blank">
+          <a
+            className="text-yellow"
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+          >
             &quot;{url}&quot;
           </a>
         </div>
