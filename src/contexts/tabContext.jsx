@@ -26,6 +26,10 @@ export function TabProvider({ children }) {
     setTabHistory((prev) => prev.filter((t) => t.name !== tab.name))
   }
 
+  const reorderTabs = useCallback((newOrder) => {
+    setTabList(newOrder)
+  }, [])
+
   const switchTabs = (tab) => {
     setTabHistory((prev) => [tab, ...prev.filter((t) => t.name !== tab.name)])
   }
@@ -35,7 +39,8 @@ export function TabProvider({ children }) {
     tabList,
     addTab,
     removeTab,
-    switchTabs
+    switchTabs,
+    reorderTabs
   }
 
   return <TabContext.Provider value={value}>{children}</TabContext.Provider>
