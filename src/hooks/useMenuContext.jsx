@@ -5,7 +5,7 @@ export function useMenuContext() {
   const menu = useContext(MenuContext)
 
   if (!menu) {
-    throw new Error('useMenuContext must be used within MenuaProvider')
+    throw new Error('useMenuContext must be used within MenuProvider')
   }
 
   return menu
