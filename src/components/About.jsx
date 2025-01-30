@@ -8,11 +8,14 @@ import { TabLink } from './TabLink'
 import { MarkdownButton } from './MarkdownButton'
 import { tabsContent } from '../utils/tabs'
 import animationData from '../assets/animations/coding.json'
-import pdf from '../assets/resume/CurrículoLuiz.pdf'
+import ptResume from '../assets/resume/CurrículoLuiz.pdf'
+import enResume from '../assets/resume/ResumeLuiz.pdf'
 
 export function About() {
-  const { t } = useTranslation()
-  // TODO: resume with current language
+  const { t, i18n } = useTranslation()
+
+  const resume = i18n.language === 'pt' ? ptResume : enResume
+
   return (
     <div className="relative pt-4 pl-2 h-full flex">
       <div className="grow max-w-[1200px] z-10">
@@ -59,7 +62,7 @@ export function About() {
             className="text-xl md:text-3xl"
           />
           <Text>{t('about.p4')}</Text>
-          <MarkdownButton as="a" href={pdf} target="_blank" rel="noreferrer">
+          <MarkdownButton as="a" href={resume} target="_blank" rel="noreferrer">
             {t('about.download-button')}
           </MarkdownButton>
         </Section>
