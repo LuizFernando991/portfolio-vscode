@@ -1,11 +1,14 @@
 import { File } from '../../files/File'
 import { useTabContext } from '../../../hooks/useTabContext'
 import classNames from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 export function DirectoryItem({ item, level }) {
   const paddingLeft = `${level * 14}px`
 
   const tabs = useTabContext()
+  const { t } = useTranslation()
+
   const selected = (tabs.current && tabs.current.name) === item.name
   const handleClick = () => {
     tabs.addTab({
@@ -28,7 +31,7 @@ export function DirectoryItem({ item, level }) {
       )}
       style={{ paddingLeft: paddingLeft }}
     >
-      <File name={item.name} extension={item.extension} />
+      <File name={t(`tabs.${item.name}`)} extension={item.extension} />
     </button>
   )
 }

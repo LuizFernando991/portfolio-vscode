@@ -1,14 +1,16 @@
+import { useTranslation } from 'react-i18next'
+import classNames from 'classnames'
 import { IoIosArrowForward } from 'react-icons/io'
 import {
   Disclosure,
   DisclosurePanel,
   DisclosureButton
 } from '@headlessui/react'
-import classNames from 'classnames'
 import { DirectoryList } from './DirectoryList'
 import { useDiretoryStateContext } from '../../../hooks/useDirectoryContext'
 
 export function Directory({ directory, level }) {
+  const { t } = useTranslation()
   const diretoryState = useDiretoryStateContext()
 
   const paddingLeft = `${level * 14}px`
@@ -42,7 +44,7 @@ export function Directory({ directory, level }) {
               <IoIosArrowForward
                 className={`text-white-50a h-4 w-4 ${open ? 'rotate-90 transform' : ''}`}
               />
-              {directory.name}
+              {t(`tabs.${directory.name}`)}
             </span>
           </DisclosureButton>
           <DisclosurePanel className="relative ">

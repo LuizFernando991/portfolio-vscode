@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import classNames from 'classnames'
 import { File } from '../files/File'
 import { useTabContext } from '../../hooks/useTabContext'
@@ -12,6 +13,7 @@ export function Tab({
   showRightBorder
 }) {
   const tabs = useTabContext()
+  const { t } = useTranslation()
   const selected = tabs.current.name === tab.name
 
   const handleDragStart = (e) => {
@@ -48,7 +50,7 @@ export function Tab({
           }
         )}
       >
-        <File name={tab.name} extension={tab.extension} />
+        <File name={t(`tabs.${tab.name}`)} extension={tab.extension} />
       </span>
       <button
         onClick={() => tabs.removeTab(tab)}
