@@ -18,5 +18,8 @@
     "components": "components",
     "src": "src",
     "Portfolio": "Portfolio"
+  },
+  "settings": {
+    "lng": "Idioma"
   }
 }
