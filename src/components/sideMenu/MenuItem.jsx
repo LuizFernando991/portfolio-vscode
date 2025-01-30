@@ -5,7 +5,7 @@ export function MenuItem({ selected, Icon, onClick, iconClasses }) {
     <button
       onClick={onClick}
       className={classNames(
-        'flex items-center border-l-2 border-dark-600 p-2 cursor-pointer group',
+        'w-full flex items-center border-l-2 border-dark-600 p-2 cursor-pointer group',
         {
           'border-l-pink': selected,
           'bg-dark-400': selected,
