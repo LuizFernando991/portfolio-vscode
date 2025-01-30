@@ -1,2 +1,22 @@
 {
+  "about": {
+    "title": "Sobre",
+    "title-2": "Currículo",
+    "p1": "Eu sou um desenvolvedor Full-stack focado no desenvolvimento de Websites e Aplicações Web, que ajudam os clientes em seu sucesso com seus empreendimentos. Confira algumas aplicações na seção de Projetos! Veja mais em ",
+    "p2": "Eu também compartilho minha vida profissional com a comunidade, então sinta-se livre para me seguir no Linkedin, onde posto algumas atualizações sobre meus estudos e carreira profissional. Também posso retirar qualquer dúvida por meios dos canais de contato. Veja mais em ",
+    "p3": "Estou disponível para oportunidade de trabalho onde eu possa contribuir e aprender. Se você tem uma boa oportunidade que combina com as minhas habilidades e experiências, então não exite em me contatar.",
+    "p4": "Aqui você pode ver mais sobre minhas experiências:",
+    "download-button": "[Baixar Currículo]"
+  },
+  "tabs": {
+    "About": "Sobre",
+    "Projects": "Projetos",
+    "Technologies": "Tecnologias",
+    "Home": "Início",
+    "Contact": "Contato",
+    "index": "index",
+    "components": "componentes",
+    "src": "src",
+    "Portfolio": "Portfólio"
+  }
 }
