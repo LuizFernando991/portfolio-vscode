@@ -10,7 +10,7 @@ export function SideMenu() {
 
   return (
     <>
-      <div className="font-sans h-full flex flex-col justify-between bg-dark-600 w-12 min-w-12 relative">
+      <div className="font-sans h-full flex flex-col justify-between bg-dark-600 w-12 relative">
         <div>
           {pages.map((page) => (
             <MenuItem

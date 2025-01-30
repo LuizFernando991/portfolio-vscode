@@ -13,7 +13,7 @@ export function Dashboard() {
   }, [tabs])
 
   return (
-    <div className="font-sans relative w-full min-h-screen h-full max-h-screen flex overflow-hidden">
+    <div className="font-sans relative w-full h-full flex overflow-hidden">
       <div className="flex-1 flex flex-col w-full overflow-hidden">
         <Navbar />
         {tabs.current ? (
