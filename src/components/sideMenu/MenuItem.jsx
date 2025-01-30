@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 
-export function MenuItem({ selected, Icon, onClick }) {
+export function MenuItem({ selected, Icon, onClick, iconClasses }) {
   return (
     <button
       onClick={onClick}
@@ -14,9 +14,13 @@ export function MenuItem({ selected, Icon, onClick }) {
       )}
     >
       <Icon
-        className={classNames('w-7 h-8 group-hover:text-white', {
-          'text-white-50a': !selected
-        })}
+        className={classNames(
+          'w-7 h-8 group-hover:text-white',
+          {
+            'text-white-50a': !selected
+          },
+          iconClasses
+        )}
       />
     </button>
   )

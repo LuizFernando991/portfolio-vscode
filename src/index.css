@@ -27,6 +27,7 @@
 @import "tailwindcss";
 
 @theme {
+  --color-dark-800: #101116;
   --color-dark-700: #191A21;
   --color-dark-600: #21222C;
   --color-dark-500: #282A36;
@@ -34,6 +35,7 @@
   --color-dark-300: #44475A;
   --color-dark-200: #505262;
   --color-dark-100: #5A6795;
+  --color-dark-grey: #262626;
   --color-white: #F8F8F2;
   --color-white-75a: hsla(0,0%,100%,.75);
   --color-white-50a: hsla(0,0%,100%,.5);
