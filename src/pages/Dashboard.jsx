@@ -8,7 +8,7 @@ export function Dashboard() {
 
   useEffect(() => {
     if (tabRef.current) {
-      tabRef.current.scrollTo({ top: 0, behaviour: 'smooth' })
+      tabRef.current.scrollTo({ top: 20, behaviour: 'smooth' })
     }
   }, [tabs])
 
@@ -21,7 +21,7 @@ export function Dashboard() {
             ref={tabRef}
             className="h-full font-mono pt-2 pb-[100px] px-2 overflow-y-auto flex-1"
           >
-            <div className="w-full h-full">{tabs.current.component}</div>
+            <div className="w-full min-h-full">{tabs.current.component}</div>
           </div>
         ) : (
           <div>Não tem tab</div>
