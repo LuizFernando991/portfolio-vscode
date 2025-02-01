@@ -52,7 +52,7 @@ export function Settings() {
           </h3>
           <hr className="text-dark-500" />
         </div>
-        <div className="flex flex-col px-2">
+        <div className="flex flex-col px-2 pt-2">
           <OptionButton
             onClick={() => i18n.changeLanguage('pt')}
             text="Português"
