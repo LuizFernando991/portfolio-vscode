@@ -87,7 +87,10 @@ export function TabBar() {
   useEffect(() => {
     if (selectedTab) {
       const tab = document.querySelector(`[data-tab="${selectedTab}"]`)
-      tab?.scrollIntoView()
+      tab?.scrollIntoView({
+        block: 'nearest',
+        inline: 'start'
+      })
     }
   }, [selectedTab])
 
