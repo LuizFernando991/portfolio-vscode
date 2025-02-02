@@ -1,39 +1,8 @@
-import { FaPhone } from 'react-icons/fa'
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
+import { useRef } from 'react'
+import { Minimap } from './Minimap'
+import { contactData } from '../utils/contact'
 
-const contactData = {
-  contact: {
-    email: {
-      display: 'lfernando.r991@gmail.com',
-      url: 'mailto:lfernando.r991@gmail.com',
-      icon: null
-    },
-    social: [
-      {
-        name: 'LinkedIn',
-        url: 'https://linkedin.com/in/lfernandor991',
-        icon: <FaLinkedin className="inline mr-1" />
-      },
-      {
-        name: 'GitHub',
-        url: 'https://github.com/LuizFernando991',
-        icon: <FaGithub className="inline mr-1" />
-      },
-      {
-        name: 'Instagram',
-        url: 'https://instagram.com/lfernando.r991/',
-        icon: <FaInstagram className="inline mr-1" />
-      }
-    ],
-    phone: {
-      display: '+55 (37) 991701381',
-      url: 'tel:+5537991701381',
-      icon: <FaPhone className="inline mr-1" />
-    }
-  }
-}
-
-function Item({ name, url, display, icon }) {
+function Item({ name, url, display }) {
   return (
     <div>
       <span className="text-soft-blue">&quot;{name}&quot;</span>: {'{'}
@@ -46,7 +15,6 @@ function Item({ name, url, display, icon }) {
             target="_blank"
             rel="noreferrer"
           >
-            {icon}
             <span className="text-yellow">&quot;{display}&quot;</span>
           </a>
           ,
@@ -69,8 +37,9 @@ function Item({ name, url, display, icon }) {
 }
 
 export function Contact() {
-  return (
-    <div className="font-mono text-xs md:text-base text-gray-100 w-full h-full">
+  const containerRef = useRef(null)
+  const component = (animate = false) => (
+    <div className="font-mono text-[10px] md:text-base text-gray-100 w-full h-full">
       <div className="text-purple-400">{'{'}</div>
 
       {/* Contact Section */}
@@ -134,7 +103,18 @@ export function Contact() {
 
       <div className="text-purple-400">
         {'}'}
-        <span className="animate-blink text-white-75a">|</span>
+        {animate && <span className="animate-blink text-white-75a">|</span>}
+      </div>
+    </div>
+  )
+  return (
+    <div
+      ref={containerRef}
+      className="pl-1 pr-10 md:px-0 md:pl-10 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-hidden font-mono"
+    >
+      {component(true)}
+      <div className="w-40 xl:w-52 z-10 sticky top-0 hidden lg:block">
+        <Minimap of={component()} scrollContainerRef={containerRef} />
       </div>
     </div>
   )
