@@ -6,6 +6,6 @@ export function Header({ headingLevel, className, text }) {
   return (
     <Tag
       className={classNames('text-purple', className)}
-    >{`${'#'.repeat(headingLevel)} ${text}`}</Tag>
+    >{`${'#'.repeat(headingLevel)}${text}`}</Tag>
   )
 }
