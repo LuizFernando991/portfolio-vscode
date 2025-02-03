@@ -31,7 +31,7 @@ export function Settings() {
     <div className="w-full">
       {showSettings && (
         <div
-          className="absolute w-screen h-screen top-0 bottom-0 right-0 left-0 z-90"
+          className="absolute w-screen h-screen top-0 bottom-0 right-0 left-0 z-100"
           onClick={() => setShowSettings(false)}
         />
       )}
