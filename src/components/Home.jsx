@@ -17,16 +17,16 @@ export function Home() {
           headingLevel={1}
           className="text-3xl lg:text-6xl font-extrabold font-mono"
         />
-        <div className="flex items-end">
-          <Header
-            text="Full-stack developer"
-            headingLevel={2}
-            className="text-2xl lg:text-4xl font-extralight font-mono break-words opacity-50"
-          />
-          <span className="animate-blink text-purple font-extralight text-2xl lg:text-4xl opacity-50">
+
+        <Header
+          text="Full-stack developer"
+          headingLevel={2}
+          className="text-2xl lg:text-4xl font-extralight font-mono break-words opacity-50"
+        >
+          <span className="animate-blink text-purple font-extralight opacity-50">
             |
           </span>
-        </div>
+        </Header>
         <div className="flex gap-4">
           <MarkdownButton
             onClick={() => tabs.addTab(tabsContent.about)}
