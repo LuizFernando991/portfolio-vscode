@@ -1,9 +1,10 @@
 import classNames from 'classnames'
 
-export function MenuItem({ selected, Icon, onClick, iconClasses }) {
+export function MenuItem({ selected, Icon, iconClasses, as, ...props }) {
+  const ButtonTag = as || 'button'
+
   return (
-    <button
-      onClick={onClick}
+    <ButtonTag
       className={classNames(
         'w-full flex items-center border-l-2 border-dark-600 p-2 cursor-pointer group',
         {
@@ -12,6 +13,7 @@ export function MenuItem({ selected, Icon, onClick, iconClasses }) {
           'bg-dark-600': !selected
         }
       )}
+      {...props}
     >
       <Icon
         className={classNames(
@@ -22,6 +24,6 @@ export function MenuItem({ selected, Icon, onClick, iconClasses }) {
           iconClasses
         )}
       />
-    </button>
+    </ButtonTag>
   )
 }
