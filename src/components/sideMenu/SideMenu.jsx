@@ -1,9 +1,9 @@
 import { useMenuContext } from '../../hooks/useMenuContext'
 import { MenuItem } from './MenuItem'
 import { Explorer } from '../Explorer'
-
-import { pages } from '../../utils/pages'
+import { ResumeButton } from './ResumeButton'
 import { Settings } from './Settings'
+import { pages } from '../../utils/pages'
 
 export function SideMenu() {
   const menu = useMenuContext()
@@ -21,7 +21,10 @@ export function SideMenu() {
             />
           ))}
         </div>
-        <Settings />
+        <div>
+          <ResumeButton />
+          <Settings />
+        </div>
       </div>
       {menu.explorerOpen && <Explorer />}
     </>
