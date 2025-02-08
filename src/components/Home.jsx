@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import Lottie from 'lottie-react'
 import { useTabContext } from '../hooks/useTabContext'
 import { Header } from './Header'
@@ -7,6 +8,7 @@ import animationData from '../assets/animations/coding.json'
 import profile from '../assets/images/Profile.png'
 
 export function Home() {
+  const { t } = useTranslation()
   const tabs = useTabContext()
 
   return (
@@ -32,13 +34,13 @@ export function Home() {
             onClick={() => tabs.addTab(tabsContent.about)}
             className="cursor-pointer text-xl lg:text-3xl xl:text-4xl"
           >
-            [About Me]
+            {t('home.about-button')}
           </MarkdownButton>
           <MarkdownButton
             onClick={() => tabs.addTab(tabsContent.contact)}
             className="cursor-pointer text-xl lg:text-3xl xl:text-4xl"
           >
-            [Contact Me]
+            {t('home.contact-button')}
           </MarkdownButton>
         </div>
       </div>

@@ -21,5 +21,9 @@
   },
   "settings": {
     "lng": "Language"
+  },
+  "home": {
+    "about-button": "[Sobre Mim]",
+    "contact-button": "[Meus Contatos]"
   }
 }
