@@ -1,4 +1,5 @@
 import { Dashboard } from '../pages/Dashboard'
+import { PinRepositories } from '../components/sideMenuContents/githubSideContent/PinRepositories'
 import { HiOutlineDocumentDuplicate } from 'react-icons/hi2'
 import { FaGithub } from 'react-icons/fa'
 import { BiLogoLinkedinSquare } from 'react-icons/bi'
@@ -19,6 +20,7 @@ export const pages = [
   {
     name: 'github',
     component: <></>,
+    explorerComponent: <PinRepositories />,
     icon: FaGithub
   }
 ]
