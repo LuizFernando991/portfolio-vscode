@@ -13,7 +13,7 @@ export function Linkedin() {
         icon={<Lottie animationData={animationData} loop={true} />}
         title="LinkedIn"
         subtitle="in/lfernandor991"
-        buttonLink="https://github.com/LuizFernando991"
+        buttonLink="https://www.linkedin.com/in/lfernandor991/"
         buttonTitle={t('linkedin.button')}
       >
         <div className="mt-10 max-w-320 flex flex-col gap-4">
