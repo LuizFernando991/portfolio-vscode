@@ -24,6 +24,18 @@
   },
   "home": {
     "about-button": "[Sobre Mim]",
-    "contact-button": "[Meus Contatos]"
+    "guide-button": "[Guia do Site]"
+  },
+  "linkedin": {
+    "button": "Veja mais",
+    "link-button": "Visite Meu LinkedIn",
+    "p-1": "Sou um desenvolvedor full-stack com experiência em TypeScript, JavaScript, HTML, CSS, React, Next.js e Node.js. Tenho paixão por criar aplicações web escaláveis, intuitivas e de alta performance, sempre buscando adotar as melhores práticas e explorar novas tecnologias. Além do desenvolvimento, me interesso por arquitetura de software, otimização de desempenho e integração de serviços em nuvem.",
+    "p-2": "No meu LinkedIn, compartilho conhecimentos, experiências e aprendizados da minha trajetória profissional. Estou sempre aberto a novas conexões, colaborações e oportunidades para crescer na área. Se quiser trocar ideias sobre tecnologia ou desenvolvimento, sinta-se à vontade para me enviar uma mensagem!"
+  },
+  "github": {
+    "button": "Veja mais",
+    "link-button": "Visite Meu Github",
+    "p-1": "No meu GitHub, você encontrará projetos que desenvolvi utilizando TypeScript, JavaScript, HTML, CSS, React, Next.js e Node.js. Gosto de criar aplicações web modernas, explorando boas práticas de desenvolvimento, arquitetura limpa e performance. Além disso, sempre busco aprender novas tecnologias e aprimorar minhas habilidades através de desafios práticos.",
+    "p-2": "Também compartilho repositórios com soluções para problemas do dia a dia, experimentos com bibliotecas e frameworks, além de contribuições para a comunidade. Se você quiser conferir meu código, dar feedback ou colaborar em algum projeto, fique à vontade para explorar meus repositórios!"
   }
 }

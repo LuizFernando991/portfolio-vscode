@@ -37,10 +37,10 @@ export function Home() {
             {t('home.about-button')}
           </MarkdownButton>
           <MarkdownButton
-            onClick={() => tabs.addTab(tabsContent.contact)}
+            onClick={() => tabs.addTab(tabsContent.index)}
             className="cursor-pointer text-xl lg:text-3xl xl:text-4xl"
           >
-            {t('home.contact-button')}
+            {t('home.guide-button')}
           </MarkdownButton>
         </div>
       </div>
