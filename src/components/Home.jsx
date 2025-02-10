@@ -17,13 +17,13 @@ export function Home() {
         <Header
           text="Luiz Fernando"
           headingLevel={1}
-          className="text-3xl lg:text-6xl font-extrabold font-mono"
+          className="text-3xl lg:text-6xl font-extrabold font-mono text-purple"
         />
 
         <Header
           text="Full-stack developer"
           headingLevel={2}
-          className="text-2xl lg:text-4xl font-extralight font-mono break-words opacity-50"
+          className="text-2xl lg:text-4xl font-extralight font-mono break-words opacity-50 text-purple"
         >
           <span className="animate-blink text-purple font-extralight opacity-50">
             |

@@ -25,7 +25,7 @@ export function About() {
         <Header
           headingLevel="1"
           text={t('about.title')}
-          className="text-3xl md:text-5xl"
+          className="text-3xl md:text-5xl text-purple"
         />
         <BreakLine />
         <Text className="mb-10">
@@ -63,7 +63,7 @@ export function About() {
         <Header
           headingLevel="2"
           text={t('about.title-2')}
-          className="text-xl md:text-3xl"
+          className="text-xl md:text-3xl text-purple"
         />
         <Text>{t('about.p4')}</Text>
         <MarkdownButton as="a" href={resume} target="_blank" rel="noreferrer">
