@@ -45,6 +45,7 @@
   --color-soft-blue: #8ce1e9;
   --color-yellow: #e7e26d;
   --color-purple: #bd93f9;
+  --color-blue: #70a5fd;
 
   --font-sans: 'SF Pro Display', Roboto, serif, Arial;
   --font-mono: Menlo, 'Fira Mono', 'Courier New';
@@ -95,6 +96,25 @@ body {
 
 .animate-blink {
   animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes border-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.animate-fade {
+  animation: fade-in 2s;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
