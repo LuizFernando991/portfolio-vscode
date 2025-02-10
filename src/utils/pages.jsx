@@ -1,9 +1,11 @@
 import { Dashboard } from '../pages/Dashboard'
+import { Github } from '../pages/Github'
 import { PinRepositories } from '../components/sideMenuContents/githubSideContent/PinRepositories'
 import { HiOutlineDocumentDuplicate } from 'react-icons/hi2'
 import { FaGithub } from 'react-icons/fa'
 import { BiLogoLinkedinSquare } from 'react-icons/bi'
 import { Files } from '../components/sideMenuContents/dashboardSideContent/Files'
+import { Linkedin } from '../pages/Linkedin'
 
 export const pages = [
   {
@@ -14,12 +16,12 @@ export const pages = [
   },
   {
     name: 'linkedin',
-    component: <></>,
+    component: <Linkedin />,
     icon: BiLogoLinkedinSquare
   },
   {
     name: 'github',
-    component: <></>,
+    component: <Github />,
     explorerComponent: <PinRepositories />,
     icon: FaGithub
   }
