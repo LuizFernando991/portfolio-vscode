@@ -1,18 +1,35 @@
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import Lottie from 'lottie-react'
+import { useBreakpoint } from '../hooks/useBreakPoint'
 import { useTabContext } from '../hooks/useTabContext'
 import { Header } from './Header'
 import { MarkdownButton } from './MarkdownButton'
 import { tabsContent } from '../utils/tabs'
 import animationData from '../assets/animations/coding.json'
 import profile from '../assets/images/Profile.png'
+import classNames from 'classnames'
 
 export function Home() {
+  const container = useRef()
   const { t } = useTranslation()
   const tabs = useTabContext()
 
+  const { isBreakpoint } = useBreakpoint(container)
+
+  const isBiggerThanLgBreakPoint = isBreakpoint('lg')
+
   return (
-    <div className="w-full h-full relative flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center overflow-x-hidden gap-8 lg:gap-2 overflow-y-auto">
+    <div
+      ref={container}
+      className={classNames(
+        'w-full h-full relative items-center flex overflow-x-hidden overflow-y-auto',
+        {
+          'justify-between  flex-row gap-2': isBiggerThanLgBreakPoint,
+          'justify-center flex-col-reverse gap-8': !isBiggerThanLgBreakPoint
+        }
+      )}
+    >
       <div className="flex flex-col gap-4 md:pl-10">
         <Header
           text="Luiz Fernando"
