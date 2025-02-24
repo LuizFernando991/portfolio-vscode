@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 export const breakpoints = {
   xs: 0,
@@ -10,8 +10,8 @@ export const breakpoints = {
 }
 
 export function useBreakpoint(ref) {
-  const [width, setWidth] = useState(ref?.current?.clientWidth || 0)
-  const [breakpoint, setBreakpoint] = useState(getBreakpoint(width))
+  const [width, setWidth] = useState(0)
+  const [breakpoint, setBreakpoint] = useState('xs')
 
   function getBreakpoint(width) {
     if (width >= breakpoints['2xl']) return '2xl'
@@ -22,14 +22,20 @@ export function useBreakpoint(ref) {
     return 'xs'
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = ref?.current
     if (!container) return
 
-    const resizeObserver = new ResizeObserver(([entry]) => {
-      const newWidth = entry.contentRect.width
+    const updateSize = () => {
+      const newWidth = container.clientWidth
       setWidth(newWidth)
       setBreakpoint(getBreakpoint(newWidth))
+    }
+
+    updateSize()
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateSize()
     })
 
     resizeObserver.observe(container)
