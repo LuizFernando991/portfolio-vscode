@@ -37,5 +37,11 @@
     "link-button": "Visite Meu Github",
     "p-1": "No meu GitHub, você encontrará projetos que desenvolvi utilizando TypeScript, JavaScript, HTML, CSS, React, Next.js e Node.js. Gosto de criar aplicações web modernas, explorando boas práticas de desenvolvimento, arquitetura limpa e performance. Além disso, sempre busco aprender novas tecnologias e aprimorar minhas habilidades através de desafios práticos.",
     "p-2": "Também compartilho repositórios com soluções para problemas do dia a dia, experimentos com bibliotecas e frameworks, além de contribuições para a comunidade. Se você quiser conferir meu código, dar feedback ou colaborar em algum projeto, fique à vontade para explorar meus repositórios!"
+  },
+  "technologies": {
+    "title": "Minhas tecnologias",
+    "subtitle": "Tecnologias que domino",
+    "subtitle-2": "Estou estudando no momento",
+    "github": "Confira meu github para mais detalhes"
   }
 }

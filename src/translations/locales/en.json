@@ -37,5 +37,11 @@
     "link-button": "Visit My Github",
     "p-1": "On my GitHub, you will find projects I have developed using TypeScript, JavaScript, HTML, CSS, React, Next.js, and Node.js. I enjoy building modern web applications, exploring best development practices, clean architecture, and performance optimization. Additionally, I am always looking to learn new technologies and improve my skills through practical challenges.",
     "p-2": "I also share repositories with solutions for everyday problems, experiments with libraries and frameworks, as well as contributions to the community. If you’d like to check out my code, give feedback, or collaborate on a project, feel free to explore my repositories!"
-  }
+  },
+  "technologies": {
+    "title": "My Technologies",
+    "subtitle": "Technologies I master",
+    "subtitle-2": "I am currently studying",
+    "github": "Check out my GitHub for more details"
+}
 }
