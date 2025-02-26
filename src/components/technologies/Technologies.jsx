@@ -40,7 +40,12 @@ export function Technologies() {
         />
         <div className="grid gap-2 grid-cols-2 md:grid-cols-4 max-w-[800px]">
           {actuallyStuding.map((tec) => (
-            <TechnologyItem Icon={tec.icon} name={tec.name} key={tec.name} />
+            <TechnologyItem
+              small
+              Icon={tec.icon}
+              name={tec.name}
+              key={tec.name}
+            />
           ))}
         </div>
       </Section>
