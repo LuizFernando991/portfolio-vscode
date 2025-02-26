@@ -79,7 +79,7 @@ export function About() {
       className="px-2 md:pl-10 md:px-0 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-hidden font-mono"
     >
       {component(true)}
-      <div className="w-52 z-10 sticky top-0 hidden lg:block">
+      <div className="w-52 z-10 sticky top-0 hidden lg:block pr-4">
         <Minimap of={component()} scrollContainerRef={containerRef} />
       </div>
       <div className="fixed top-0 left-0 right-0 w-full -z-100 h-full hidden lg:block opacity-[1%]">

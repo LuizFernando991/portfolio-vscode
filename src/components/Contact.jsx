@@ -113,7 +113,7 @@ export function Contact() {
       className="pl-1 pr-10 md:px-0 md:pl-10 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-hidden font-mono"
     >
       {component(true)}
-      <div className="w-40 xl:w-52 z-10 sticky top-0 hidden lg:block">
+      <div className="w-40 xl:w-52 z-10 sticky top-0 hidden lg:block pr-4">
         <Minimap of={component()} scrollContainerRef={containerRef} />
       </div>
     </div>
