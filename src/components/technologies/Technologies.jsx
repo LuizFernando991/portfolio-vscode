@@ -19,14 +19,14 @@ export function Technologies() {
         <Header
           headingLevel="1"
           text={t('technologies.title')}
-          className="text-xl md:text-3xl text-soft-blue mb-8"
+          className="text-xl md:text-2xl text-soft-blue mb-2"
         />
         <Header
           headingLevel="1"
           text={t('technologies.subtitle')}
-          className="text-md md:text-md text-white-75a"
+          className="text-sm text-white-75a"
         />
-        <div className="grid gap-2 grid-cols-2 md:grid-cols-4 max-w-[800px] mb-10">
+        <div className="grid gap-2 grid-cols-2 md:grid-cols-4 max-w-[800px] mb-2">
           {technologies.map((tec) => (
             <TechnologyItem Icon={tec.icon} name={tec.name} key={tec.name} />
           ))}
@@ -36,7 +36,7 @@ export function Technologies() {
         <Header
           headingLevel="1"
           text={t('technologies.subtitle-2')}
-          className="text-md md:text-md text-white-75a"
+          className="text-sm text-white-75a"
         />
         <div className="grid gap-2 grid-cols-2 md:grid-cols-4 max-w-[800px]">
           {actuallyStuding.map((tec) => (
@@ -49,16 +49,16 @@ export function Technologies() {
           ))}
         </div>
       </Section>
-      <Section className="pb-20 pt-5">
+      <Section className="pb-20 pt-8">
         <Header
           headingLevel="1"
           text="GitHub"
-          className="text-xl md:text-3xl text-soft-blue"
+          className="text-xl text-soft-blue"
         />
         <Header
           headingLevel="1"
           text={t('technologies.github')}
-          className="text-md md:text-md text-white-75a"
+          className="text-sm text-white-75a"
         />
         <MarkdownButton
           as="a"
