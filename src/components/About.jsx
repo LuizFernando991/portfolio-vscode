@@ -39,12 +39,22 @@ export function About() {
           .
         </Text>
         <Text className="mb-10">
+          {t('about.p5')}
+          <TabLink
+            className="font-bold text-yellow cursor-pointer"
+            tab={tabsContent.technologies}
+          >
+            {t('tabs.Technologies')}.js
+          </TabLink>
+          .
+        </Text>
+        <Text className="mb-10">
           {t('about.p2')}
           <TabLink
             className="font-bold text-yellow cursor-pointer"
             tab={tabsContent.contact}
           >
-            {t('tabs.Contact')}.md
+            {t('tabs.Contact')}.json
           </TabLink>
           .
         </Text>
