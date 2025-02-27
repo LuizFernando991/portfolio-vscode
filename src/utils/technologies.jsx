@@ -19,7 +19,8 @@ import {
   SiRust,
   SiBun,
   SiTerraform,
-  SiDrizzle
+  SiDrizzle,
+  SiApachekafka
 } from 'react-icons/si'
 import { FaNode } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
@@ -124,5 +125,9 @@ export const actuallyStuding = [
   {
     name: 'Drizzle',
     icon: SiDrizzle
+  },
+  {
+    name: 'Kafka',
+    icon: SiApachekafka
   }
 ]

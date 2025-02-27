@@ -42,7 +42,21 @@
   "technologies": {
     "title": "My Technologies",
     "subtitle": "Technologies I master",
-    "subtitle-2": "I am currently studying",
+    "subtitle-2": "I'm studying",
     "github": "Check out my GitHub for more details"
-}
+  },
+  "projects": {
+    "pdfhelper": {
+      "description": "A project where users can upload PDF files and analyze them with the assistance of artificial intelligence through integration with OpenAI's GPT-chat. Additionally, it features payment integration with the STRIPE platform, offering the option to enhance the user's current plan. You can check out the demo by clicking the link below:"
+    },
+    "airbnb": {
+      "description": "A full-stack project, built with Next.js 13 and Tailwind. It focuses on property rentals similar to Airbnb. It allows login with Google and GitHub accounts through NextAuth, along with various front-end features for an enhanced user experience"
+    },
+    "tiktok": {
+      "description": "A full-stack project where I use GraphQL to build the API in Nest.js, including user authentication and all the functionalities to create posts, upload videos and images, as well as the possibility of comments and likes."
+    },
+    "instagram": {
+      "description": "A full-stack project where I clone some Instagram features, such as: login, new account registration, stories, notifications, posts, likes, and comments, as well as the possibility of user editing and changing profile pictures."
+    }
+  }
 }
