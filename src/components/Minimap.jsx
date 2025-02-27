@@ -13,7 +13,7 @@ export function Minimap({ scrollContainerRef, of, scale = 0.15 }) {
   } = useMinimap({ minimapRef, indicatorRef, scrollContainerRef, scale })
 
   return (
-    <div onClick={handleMinimapClick} style={{ position: 'relative' }}>
+    <div onClick={handleMinimapClick} className="relative">
       {/* The draggable indicator */}
       <div
         ref={indicatorRef}

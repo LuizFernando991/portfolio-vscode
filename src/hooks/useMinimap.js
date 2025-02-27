@@ -6,7 +6,7 @@ export function useMinimap({
   minimapRef,
   scale
 }) {
-  const [indicatorHeight, setIndicatorHeight] = useState(40)
+  const [indicatorHeight, setIndicatorHeight] = useState(0)
   const [minimapHeight, setMinimapHeight] = useState(0)
 
   const updateIndicatorPosition = useCallback(() => {
@@ -24,21 +24,19 @@ export function useMinimap({
   }, [scrollContainerRef, indicatorRef, indicatorHeight, minimapHeight])
 
   const updateMinimapSize = useCallback(() => {
-    const minimapContainer = minimapRef.current
-    const scrollContainer = scrollContainerRef.current
-    if (!minimapContainer || !scrollContainer) return
+    const scrollContainer = scrollContainerRef?.current
+    if (!scrollContainer) return
 
     const viewHeightPercent =
       scrollContainer.clientHeight / scrollContainer.scrollHeight
 
     const newIndicatorHeight =
-      minimapContainer.scrollHeight * scale * viewHeightPercent
-
-    const newMinimapheight = minimapContainer.scrollHeight * scale
+      scrollContainer.scrollHeight * scale * viewHeightPercent
+    const newMinimapHeight = scrollContainer.scrollHeight * scale
 
     setIndicatorHeight(newIndicatorHeight)
-    setMinimapHeight(newMinimapheight, newIndicatorHeight)
-  }, [scale, scrollContainerRef, minimapRef])
+    setMinimapHeight(newMinimapHeight)
+  }, [scale, scrollContainerRef])
 
   const calculateScroll = useCallback(
     (clientY) => {
@@ -94,21 +92,23 @@ export function useMinimap({
   }
 
   useEffect(() => {
-    const container = scrollContainerRef.current
-    if (!container) return
+    setTimeout(() => {
+      const container = scrollContainerRef.current
+      if (!container) return
 
-    const resizeObserver = new ResizeObserver(updateMinimapSize)
-    resizeObserver.observe(container)
+      const resizeObserver = new ResizeObserver(updateMinimapSize)
+      resizeObserver.observe(container)
 
-    updateMinimapSize()
+      updateMinimapSize()
 
-    container.addEventListener('scroll', updateIndicatorPosition)
-    window.addEventListener('resize', updateMinimapSize)
-    return () => {
-      resizeObserver.disconnect()
-      container.removeEventListener('scroll', updateIndicatorPosition)
-      window.removeEventListener('resize', updateMinimapSize)
-    }
+      container.addEventListener('scroll', updateIndicatorPosition)
+      window.addEventListener('resize', updateMinimapSize)
+      return () => {
+        resizeObserver.disconnect()
+        container.removeEventListener('scroll', updateIndicatorPosition)
+        window.removeEventListener('resize', updateMinimapSize)
+      }
+    }, 10) //await childrens render
   }, [scrollContainerRef, updateMinimapSize, updateIndicatorPosition])
 
   return {
