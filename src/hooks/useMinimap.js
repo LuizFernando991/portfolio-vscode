@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useLayoutEffect, useState } from 'react'
 
 export function useMinimap({
   scrollContainerRef,
@@ -91,24 +91,22 @@ export function useMinimap({
     window.addEventListener('mouseup', handleMouseUp)
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      const container = scrollContainerRef.current
-      if (!container) return
-
-      const resizeObserver = new ResizeObserver(updateMinimapSize)
-      resizeObserver.observe(container)
-
+  useLayoutEffect(() => {
+    requestAnimationFrame(() => {
       updateMinimapSize()
+      updateIndicatorPosition()
+    })
 
-      container.addEventListener('scroll', updateIndicatorPosition)
-      window.addEventListener('resize', updateMinimapSize)
-      return () => {
-        resizeObserver.disconnect()
-        container.removeEventListener('scroll', updateIndicatorPosition)
-        window.removeEventListener('resize', updateMinimapSize)
-      }
-    }, 10) //await childrens render
+    const scrollContainer = scrollContainerRef.current
+    if (!scrollContainer) return
+
+    scrollContainer.addEventListener('scroll', updateIndicatorPosition)
+    window.addEventListener('resize', updateMinimapSize)
+
+    return () => {
+      scrollContainer.removeEventListener('scroll', updateIndicatorPosition)
+      window.removeEventListener('resize', updateMinimapSize)
+    }
   }, [scrollContainerRef, updateMinimapSize, updateIndicatorPosition])
 
   return {
