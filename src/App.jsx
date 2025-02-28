@@ -1,5 +1,6 @@
-import { SideMenu } from './components/sideMenu/SideMenu'
 import { useMenuContext } from './hooks/useMenuContext'
+import { SideMenu } from './components/sideMenu/SideMenu'
+import { FinalLine } from './components/FinalLine'
 
 function App() {
   const menu = useMenuContext()
@@ -9,7 +10,7 @@ function App() {
         <SideMenu />
         {menu.currentPage.component}
       </div>
-      <div className="w-full h-4 bg-dark-800" />
+      <FinalLine />
     </div>
   )
 }
