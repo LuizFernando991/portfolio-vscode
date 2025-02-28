@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import Lottie from 'lottie-react'
 import { Minimap } from '../Minimap'
-import { Header } from '../Header'
 import { Section } from '../Section'
 import { projects } from '../../utils/projects'
 import { ProjectItem } from './ProjectItem'
@@ -12,11 +11,6 @@ export function Projects() {
 
   const component = () => (
     <div className="relative grow max-w-[800px] z-10 pt-2">
-      <Header
-        headingLevel="1"
-        text={'Projects'}
-        className="text-xl md:text-3xl text-white mb-2 font-semibold font-mono"
-      />
       <div className="flex flex-col gap-40 mt-20">
         {projects.map((project, index) => (
           <Section key={index}>

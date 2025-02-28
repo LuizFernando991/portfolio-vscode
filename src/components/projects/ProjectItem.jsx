@@ -17,9 +17,9 @@ export function ProjectItem({
       <img src={image} alt={title} className="w-full max-w-140" />
       <div>
         <h3 className="mb-3 text-xl lg:text-3xl font-semibold font-mono">
-          {title}
+          #{title}
         </h3>
-        <p className="text-white-75a text-sm lg:text-md">{t(description)}</p>
+        <p className="text-white-75a text-sm lg:text-md">## {t(description)}</p>
       </div>
       <div className="w-full flex justify-between items-center">
         <div className="flex gap-4 text-sm md:text-2xl lg:text-4xl">
