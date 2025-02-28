@@ -1,4 +1,5 @@
 import { Navbar } from '../components/Navbar'
+import { NoTab } from '../components/NoTab'
 import { useTabContext } from '../hooks/useTabContext'
 
 export function Dashboard() {
@@ -8,7 +9,7 @@ export function Dashboard() {
     <div className="font-sans relative w-full h-full flex overflow-hidden">
       <div className="flex-1 flex flex-col w-full overflow-hidden gap-2">
         <Navbar />
-        {tabs.current ? tabs.current.component : <div>Não tem tab</div>}
+        {tabs.current ? tabs.current.component : <NoTab />}
       </div>
     </div>
   )
