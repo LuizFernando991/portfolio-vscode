@@ -5,13 +5,18 @@ import { Section } from '../Section'
 import { projects } from '../../utils/projects'
 import { ProjectItem } from './ProjectItem'
 import animationData from '../../assets/animations/coding.json'
+import classNames from 'classnames'
 
 export function Projects() {
   const containerRef = useRef(null)
 
-  const component = () => (
-    <div className="relative grow max-w-[800px] z-10 pt-2">
-      <div className="flex flex-col gap-40 mt-20">
+  const component = (animated) => (
+    <div className="relative grow max-w-[800px] z-10 pt-2 ">
+      <div
+        className={classNames('flex flex-col gap-40 mt-20', {
+          'animate-fade': animated
+        })}
+      >
         {projects.map((project, index) => (
           <Section key={index}>
             <ProjectItem {...project} />
@@ -21,16 +26,15 @@ export function Projects() {
     </div>
   )
 
-  const renderComponent = component()
   return (
     <div
       ref={containerRef}
       className="px-2 md:pl-10 md:px-0 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-hidden"
     >
-      {renderComponent}
+      {component(true)}
       <div className="w-52 z-10 sticky top-0 hidden lg:block pr-4">
         <Minimap
-          of={renderComponent}
+          of={component(false)}
           scrollContainerRef={containerRef}
           scale={0.14}
         />
