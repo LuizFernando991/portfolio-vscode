@@ -1,5 +1,6 @@
 import { About } from '../components/About'
 import { Contact } from '../components/Contact'
+import { Guide } from '../components/Guide'
 import { Home } from '../components/Home'
 import { Projects } from '../components/projects/Projects'
 import { Technologies } from '../components/technologies/Technologies'
@@ -19,7 +20,7 @@ export const tabsContent = {
     extension: 'js',
     component: <Technologies />
   },
-  index: { name: 'index', type: 'file', extension: 'js' },
+  index: { name: 'index', type: 'file', extension: 'js', component: <Guide /> },
   contact: {
     name: 'Contact',
     type: 'file',

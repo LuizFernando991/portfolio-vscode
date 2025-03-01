@@ -58,5 +58,18 @@
     "instagram": {
       "description": "Um projeto full-stack onde clono algumas funções do Instagram, sendo elas: login, registro de novas contas, stories, notificações, posts, likes e comentários, além da possíbilidade de edição de usuários e troca de imagens de perfil."
     }
+  },
+  "guide": {
+    "title": "Guia do site",
+    "p1": "Este portfólio foi desenvolvido com inspiração no Visual Studio Code (VS code). Se você não está familiarizado com o VS Code ou deseja ver meu outro portfólio, basta acessar: ",
+    "subtitle": "Funcionalidades:",
+    "p2": "Este site é totalmente interativo, responsivo e todos os ícones são clicáveis",
+    "p3": "Navegar pela página utilizando o minimap no canto superior direito (basta clicar nele para subir ou descer a página)",
+    "p4": "Acessar diferentes partes do site atráves do menu lateral esquerdo",
+    "p5": "Abrir e fechar explorador de arquivos ao clicar novamente no ícone selecionado no menu lateral",
+    "p6": "Expandir e recolher diretóros dentro do explorador de arquivos",
+    "p7": "Gerenciar abas: abra, feche e reoganize arrastando na barra superior",
+    "p8": "Altere entre idiomas atráves do ícone: ",
+    "footer": "Estarei sempre incrementando esse portfolio quando tiver tempo, então fique a vontade para voltar sempre para explorar e conhecer mais sobre meu trabalho!"
   }
 }
