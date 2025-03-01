@@ -2,11 +2,13 @@ import { File } from '../../files/File'
 import { useTabContext } from '../../../hooks/useTabContext'
 import classNames from 'classnames'
 import { useTranslation } from 'react-i18next'
+import { useMenuContext } from '../../../hooks/useMenuContext'
 
 export function DirectoryItem({ item, level }) {
   const paddingLeft = `${level * 14}px`
 
   const tabs = useTabContext()
+  const { setExplorerOpen } = useMenuContext()
   const { t } = useTranslation()
 
   const selected = (tabs.current && tabs.current.name) === item.name
@@ -16,6 +18,9 @@ export function DirectoryItem({ item, level }) {
       extension: item.extension,
       component: item.component
     })
+    if (window.innerWidth <= 1024) {
+      setExplorerOpen(false)
+    }
   }
 
   return (

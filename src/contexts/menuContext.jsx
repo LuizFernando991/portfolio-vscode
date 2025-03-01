@@ -6,7 +6,7 @@ export const MenuContext = createContext()
 
 export function MenuProvider({ children }) {
   const [currentPage, setCurrentPage] = useState(pages[0])
-  const [explorerOpen, setExplorerOpen] = useState(true)
+  const [explorerOpen, setExplorerOpen] = useState(window.innerWidth >= 1024)
 
   const switchPages = (page) => {
     if (page.name === currentPage.name) {
