@@ -8,7 +8,7 @@ export function FinalLine() {
       <div className="flex items-center">
         <span className="h-full flex items-center justify-center font-extralight gap-1 text-sm px-2 bg-purple">
           <VscCode className="text-md" />
-          WSL: Ubunto
+          WSL: Ubuntu
         </span>
         <span className="h-full items-center justify-center font-extralight gap-1 text-sm px-2 hidden sm:flex ">
           <FaCodeBranch />
