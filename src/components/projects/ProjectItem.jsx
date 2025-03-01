@@ -14,7 +14,9 @@ export function ProjectItem({
   const { t } = useTranslation()
   return (
     <article className="flex flex-col items-center gap-10">
-      <img src={image} alt={title} className="w-full max-w-140" />
+      <div className="w-full max-w-140 h-72">
+        <img src={image} alt={title} className="w-full" />
+      </div>
       <div>
         <h3 className="mb-3 text-xl lg:text-3xl font-semibold font-mono">
           #{title}

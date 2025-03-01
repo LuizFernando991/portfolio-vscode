@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useState } from 'react'
+import { useCallback, useLayoutEffect, useState } from 'react'
 
 export function useMinimap({
   scrollContainerRef,
@@ -24,7 +24,6 @@ export function useMinimap({
   }, [scrollContainerRef, indicatorRef, indicatorHeight, minimapHeight])
 
   const updateMinimapSize = useCallback(() => {
-    console.log('ffff')
     const scrollContainer = scrollContainerRef?.current
     if (!scrollContainer) return
 
@@ -107,24 +106,6 @@ export function useMinimap({
     return () => {
       scrollContainer.removeEventListener('scroll', updateIndicatorPosition)
       window.removeEventListener('resize', updateMinimapSize)
-    }
-  }, [scrollContainerRef, updateMinimapSize, updateIndicatorPosition])
-
-  useEffect(() => {
-    const container = scrollContainerRef.current
-    if (!container) return
-
-    const observer = new MutationObserver(() => {
-      requestAnimationFrame(() => {
-        updateMinimapSize()
-        updateIndicatorPosition()
-      })
-    })
-
-    observer.observe(container, { childList: true, subtree: true })
-
-    return () => {
-      observer.disconnect()
     }
   }, [scrollContainerRef, updateMinimapSize, updateIndicatorPosition])
 
