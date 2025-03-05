@@ -19,7 +19,7 @@ i18n
       escapeValue: false
     },
     detection: {
-      order: ['navigator', 'localStorage', 'sessionStorage', 'cookie'],
+      order: ['localStorage', 'sessionStorage', 'cookie', 'navigator'],
       caches: ['localStorage', 'cookie']
     }
   })
