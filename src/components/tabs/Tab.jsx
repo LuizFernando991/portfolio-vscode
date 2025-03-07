@@ -25,7 +25,7 @@ export function Tab({
   return (
     <div
       className={classNames(
-        'min-w-[175px] pr-2 h-full flex justify-between items-center border-2 border-l-1 border-r-1 border-transparent border-r-dark-500 focus-within:bg-dark-500 first:border-l-2 last:border-r-2',
+        'min-w-[175px] pr-2 h-full flex justify-between items-center border-2 border-t-1 border-l-1 border-r-1 border-transparent border-r-dark-500 focus-within:bg-dark-500 first:border-l-2 last:border-r-2',
         {
           'border-t-pink': selected,
           'bg-dark-500': selected,
