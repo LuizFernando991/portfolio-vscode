@@ -17,7 +17,7 @@ export function About() {
   const { t, i18n } = useTranslation()
   const containerRef = useRef(null)
 
-  const resume = i18n.language === 'pt' ? ptResume : enResume
+  const resume = i18n.language.startsWith('pt') ? ptResume : enResume
 
   const component = (animate = false) => (
     <div className="relative grow max-w-[1200px] z-10 pt-2">

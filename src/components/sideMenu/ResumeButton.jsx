@@ -7,7 +7,7 @@ import enResume from '../../assets/resume/ResumeLuiz.pdf'
 export function ResumeButton() {
   const { i18n } = useTranslation()
 
-  const resume = i18n.language === 'pt' ? ptResume : enResume
+  const resume = i18n.language.startsWith('pt') ? ptResume : enResume
 
   return (
     <div className="w-full">

@@ -25,8 +25,6 @@ export function Settings() {
   const { i18n, t } = useTranslation()
   const [showSettings, setShowSettings] = useState(false)
 
-  const currentLanguage = i18n.language
-
   return (
     <div className="w-full">
       {showSettings && (
@@ -56,12 +54,12 @@ export function Settings() {
           <OptionButton
             onClick={() => i18n.changeLanguage('pt')}
             text="Português"
-            selected={currentLanguage === 'pt'}
+            selected={i18n.language.startsWith('pt')}
           />
           <OptionButton
             onClick={() => i18n.changeLanguage('en')}
             text="English"
-            selected={currentLanguage !== 'pt'}
+            selected={!i18n.language.startsWith('pt')}
           />
         </div>
       </div>
