@@ -38,7 +38,7 @@ export const projects = [
     title: 'Airbnb Clone',
     description: 'projects.airbnb.description',
     youtubeLink: 'https://www.youtube.com/embed/PBqff_U9kr0',
-    link: 'https://pdfhelper-alpha.vercel.app/',
+    link: 'https://project-rent-property.vercel.app/',
     codeLink: 'https://github.com/LuizFernando991/Project_Airbnb',
     tecnologies: [SiTypescript, SiNextdotjs, SiMongodb, SiPrisma, SiTailwindcss]
   },
