@@ -1,5 +1,9 @@
 export const repositories = [
   {
+    name: 'Project_Streming_Microservices',
+    link: 'https://github.com/LuizFernando991/streaming-microservices/'
+  },
+  {
     name: 'Project_Events',
     link: 'https://github.com/LuizFernando991/Events'
   },
