@@ -25,6 +25,7 @@ import {
 import { FaNode } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
 import { DiRedis, DiPostgresql } from 'react-icons/di'
+import { AiOutlineKubernetes } from 'react-icons/ai'
 
 export const technologies = [
   {
@@ -130,7 +131,10 @@ export const actuallyStuding = [
     name: 'Terraform',
     icon: SiTerraform
   },
-
+  {
+    name: 'Kubernetes',
+    icon: AiOutlineKubernetes
+  },
   {
     name: 'Kafka',
     icon: SiApachekafka
