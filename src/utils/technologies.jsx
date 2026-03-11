@@ -9,22 +9,22 @@ import {
   SiExpress,
   SiPrisma,
   SiNestjs,
-  SiPostgresql,
   SiGraphql,
   SiAmazonwebservices,
   SiDocker,
   SiGit,
   SiMysql,
   SiRabbitmq,
-  SiRust,
   SiBun,
+  SiFastify,
   SiTerraform,
   SiDrizzle,
-  SiApachekafka
+  SiApachekafka,
+  SiSwagger
 } from 'react-icons/si'
 import { FaNode } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
-import { DiRedis } from 'react-icons/di'
+import { DiRedis, DiPostgresql } from 'react-icons/di'
 
 export const technologies = [
   {
@@ -40,12 +40,20 @@ export const technologies = [
     icon: FaNode
   },
   {
+    name: 'Bun',
+    icon: SiBun
+  },
+  {
     name: 'Golang',
     icon: FaGolang
   },
   {
     name: 'Nest.js',
     icon: SiNestjs
+  },
+  {
+    name: 'Fastify.js',
+    icon: SiFastify
   },
   {
     name: 'Next.js',
@@ -73,7 +81,7 @@ export const technologies = [
   },
   {
     name: 'PostgresSQL',
-    icon: SiPostgresql
+    icon: DiPostgresql
   },
   {
     name: 'MySQL',
@@ -82,6 +90,10 @@ export const technologies = [
   {
     name: 'Prisma',
     icon: SiPrisma
+  },
+  {
+    name: 'Drizzle',
+    icon: SiDrizzle
   },
   {
     name: 'Tailwind',
@@ -106,26 +118,19 @@ export const technologies = [
   {
     name: 'Git',
     icon: SiGit
+  },
+  {
+    name: 'Swagger',
+    icon: SiSwagger
   }
 ]
 
 export const actuallyStuding = [
   {
-    name: 'Rust',
-    icon: SiRust
-  },
-  {
-    name: 'Bun',
-    icon: SiBun
-  },
-  {
     name: 'Terraform',
     icon: SiTerraform
   },
-  {
-    name: 'Drizzle',
-    icon: SiDrizzle
-  },
+
   {
     name: 'Kafka',
     icon: SiApachekafka
