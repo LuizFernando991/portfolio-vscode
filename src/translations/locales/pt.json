@@ -47,7 +47,7 @@
   },
   "projects": {
     "pdfhelper": {
-      "description" : "Um projeto em que o usuário pode fazer upload de arquivos pdf e analisá-los com a ajuda de inteligência artificial, por meio da integração com o GPT-chat da OpenAI. Além de possuir integração de pagamento com a plataforma STRIPE, proporcionando a possibilidade de fazer melhorias no plano atual do usuário. Você pode conferir a demo clicando no link abaixo:"
+      "description": "Um projeto em que o usuário pode fazer upload de arquivos pdf e analisá-los com a ajuda de inteligência artificial, por meio da integração com o GPT-chat da OpenAI. Além de possuir integração de pagamento com a plataforma STRIPE, proporcionando a possibilidade de fazer melhorias no plano atual do usuário. Você pode conferir a demo clicando no link abaixo:"
     },
     "airbnb": {
       "description": "Um projeto full-stack, feito com Next.js 13 e Tailwind. Focado no anúncio de propriedades para aluguel assim como o airbnb. Possibilita o login com contas do Google e do Github por meio do NextAuth, além de várias funcionalidades do front-end para uma melhor experiência do usuário"
@@ -70,6 +70,53 @@
     "p6": "Expandir e recolher diretóros dentro do explorador de arquivos",
     "p7": "Gerenciar abas: abra, feche e reoganize arrastando na barra superior",
     "p8": "Altere entre idiomas atráves do ícone: ",
-    "footer": "Estarei sempre incrementando esse portfolio quando tiver tempo, então fique a vontade para voltar sempre para explorar e conhecer mais sobre meu trabalho!"
+    "footer": "Estarei sempre incrementando esse portfolio quando tiver tempo, então fique a vontade para voltar sempre para explorar e conhecer mais sobre meu trabalho!",
+    "terminal-title": "Terminal Integrado:",
+    "terminal-p1": "Abra e feche o terminal com Ctrl+J ou pelo ícone de terminal no menu lateral esquerdo",
+    "terminal-p2": "Arraste a borda superior do terminal para redimensioná-lo",
+    "terminal-p3": "Digite clear para limpar a saída do terminal",
+    "terminal-p4": "Use as teclas de seta ↑ ↓ para navegar pelo histórico de comandos",
+    "terminal-p5": "Pressione Tab para autocompletar comandos",
+    "terminal-commands": "Comandos disponíveis:"
+  },
+  "terminal": {
+    "welcome": "Bem-vindo! Digite /help para ver os comandos disponíveis.",
+    "help": {
+      "title": "Comandos disponíveis:",
+      "items": {
+        "help": "Mostrar comandos disponíveis",
+        "whoami": "Quem sou eu?",
+        "about": "Sobre mim",
+        "skills": "Minhas habilidades técnicas",
+        "projects": "Meus projetos",
+        "contact": "Informações de contato",
+        "clear": "Limpar o terminal"
+      }
+    },
+    "whoami": {
+      "role": "Desenvolvedor Full-stack",
+      "location": "Baseado no Brasil 🇧🇷 · Aberto a oportunidades remotas",
+      "passion": "Apaixonado por construir aplicações web escaláveis.",
+      "quote": "\"Código limpo, arquitetura limpa, grandes produtos.\""
+    },
+    "about": {
+      "p1": "Sou um Desenvolvedor Full-stack focado em construir Websites e Aplicações Web.",
+      "p2": "Tenho experiência com diversas tecnologias e estou sempre aprendendo coisas novas para oferecer as melhores soluções.",
+      "p3": "Estou aberto a oportunidades de trabalho onde eu possa contribuir e crescer.",
+      "tip": "Dica: execute /skills para ver minha stack ou /contact para me contatar."
+    },
+    "skills": {
+      "title": "Tecnologias com que trabalho:",
+      "studying": "Atualmente estudando:"
+    },
+    "projects": {
+      "title": "Meus Projetos:"
+    },
+    "contact": {
+      "title": "Entre em contato:",
+      "email": "email",
+      "phone": "telefone"
+    },
+    "error": "comando não encontrado: {{cmd}}. Digite /help para ver os comandos disponíveis."
   }
 }

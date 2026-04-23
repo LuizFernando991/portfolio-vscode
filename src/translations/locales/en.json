@@ -8,7 +8,7 @@
     "p4": "Here you can see more about my previous experiences:",
     "p5": "I have experience with various technologies and I am always updating myself and learning new things to help provide the best possible solution for the problems that arise. Check out the technologies I have been working with on ",
     "download-button": "[Download Resume]"
-  }, 
+  },
   "tabs": {
     "About": "About",
     "Projects": "Projects",
@@ -70,6 +70,53 @@
     "p6": "Expand and collapse directories within the file explorer",
     "p7": "Manage tabs: open, close, and rearrange by dragging on the top bar",
     "p8": "Switch between languages using the icon: ",
-    "footer": "I will always be updating this portfolio whenever I have time, so feel free to come back anytime to explore and learn more about my work!"
+    "footer": "I will always be updating this portfolio whenever I have time, so feel free to come back anytime to explore and learn more about my work!",
+    "terminal-title": "Integrated Terminal:",
+    "terminal-p1": "Open and close the terminal with Ctrl+J or the terminal icon in the left sidebar",
+    "terminal-p2": "Drag the top edge of the terminal to resize it",
+    "terminal-p3": "Type clear to clear the terminal output",
+    "terminal-p4": "Use the arrow keys ↑ ↓ to navigate through command history",
+    "terminal-p5": "Press Tab to autocomplete commands",
+    "terminal-commands": "Available commands:"
+  },
+  "terminal": {
+    "welcome": "Welcome! Type /help to see available commands.",
+    "help": {
+      "title": "Available commands:",
+      "items": {
+        "help": "Show available commands",
+        "whoami": "Who am I?",
+        "about": "About me",
+        "skills": "My technical skills",
+        "projects": "My projects",
+        "contact": "Contact information",
+        "clear": "Clear the terminal"
+      }
+    },
+    "whoami": {
+      "role": "Full-stack Developer",
+      "location": "Based in Brazil 🇧🇷 · Open to remote opportunities",
+      "passion": "Passionate about building scalable web applications.",
+      "quote": "\"Clean code, clean architecture, great products.\""
+    },
+    "about": {
+      "p1": "I'm a Full-stack Developer focused on building Websites and Web Applications.",
+      "p2": "I have experience with various technologies and I'm always learning new things to provide the best solutions.",
+      "p3": "I'm open to job opportunities where I can contribute and grow.",
+      "tip": "Tip: run /skills to see my tech stack or /contact to reach me."
+    },
+    "skills": {
+      "title": "Technologies I work with:",
+      "studying": "Currently studying:"
+    },
+    "projects": {
+      "title": "My Projects:"
+    },
+    "contact": {
+      "title": "Contact me:",
+      "email": "email",
+      "phone": "phone"
+    },
+    "error": "command not found: {{cmd}}. Type /help to see available commands."
   }
 }

@@ -7,6 +7,7 @@ import { Section } from './Section'
 import { Text } from './Text'
 import { useRef } from 'react'
 import { IoSettingsOutline } from 'react-icons/io5'
+import { VscTerminal } from 'react-icons/vsc'
 
 export function Guide() {
   const { t } = useTranslation()
@@ -49,6 +50,19 @@ export function Guide() {
             </span>
           )}
         </Text>
+        <BreakLine />
+        <Header
+          headingLevel="2"
+          text={t('guide.terminal-title')}
+          className="text-md text-purple"
+        />
+        <Text className="mb-2">
+          * {t('guide.terminal-p1')} <VscTerminal className="inline" />
+        </Text>
+        <Text className="mb-2">* {t('guide.terminal-p2')}</Text>
+        <Text className="mb-2">* {t('guide.terminal-p3')}</Text>
+        <Text className="mb-2">* {t('guide.terminal-p4')}</Text>
+        <Text className="mb-4">* {t('guide.terminal-p5')}</Text>
         <BreakLine />
         <Header
           headingLevel="3"

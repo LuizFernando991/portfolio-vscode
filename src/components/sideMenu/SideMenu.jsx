@@ -1,12 +1,15 @@
 import { useMenuContext } from '../../hooks/useMenuContext'
+import { useTerminalContext } from '../../hooks/useTerminalContext'
 import { MenuItem } from './MenuItem'
 import { Explorer } from '../Explorer'
 import { ResumeButton } from './ResumeButton'
 import { Settings } from './Settings'
 import { pages } from '../../utils/pages'
+import { VscTerminal } from 'react-icons/vsc'
 
 export function SideMenu() {
   const menu = useMenuContext()
+  const terminal = useTerminalContext()
 
   return (
     <>
@@ -23,6 +26,12 @@ export function SideMenu() {
         </div>
         <div>
           <ResumeButton />
+          <MenuItem
+            Icon={VscTerminal}
+            selected={terminal.isOpen}
+            onClick={terminal.toggleTerminal}
+            title="Toggle Terminal (Ctrl+J)"
+          />
           <Settings />
         </div>
       </div>
