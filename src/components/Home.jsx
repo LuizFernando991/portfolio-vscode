@@ -53,12 +53,18 @@ export function Home() {
           >
             {t('home.about-button')}
           </MarkdownButton>
-          <MarkdownButton
-            onClick={() => tabs.addTab(tabsContent.index)}
-            className="cursor-pointer text-xl lg:text-3xl xl:text-4xl"
-          >
-            {t('home.guide-button')}
-          </MarkdownButton>
+          <div className="relative">
+            <span className="absolute -top-1 -right-1 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-soft-blue opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-soft-blue" />
+            </span>
+            <MarkdownButton
+              onClick={() => tabs.addTab(tabsContent.index)}
+              className="cursor-pointer text-xl lg:text-3xl xl:text-4xl"
+            >
+              {t('home.guide-button')}
+            </MarkdownButton>
+          </div>
         </div>
       </div>
       <div className="fixed top-0 left-0 right-0 bottom-0 w-full -z-100 h-full opacity-[1%]">
