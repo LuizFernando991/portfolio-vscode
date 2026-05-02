@@ -103,9 +103,16 @@ export function useMinimap({
     scrollContainer.addEventListener('scroll', updateIndicatorPosition)
     window.addEventListener('resize', updateMinimapSize)
 
+    const resizeObserver = new ResizeObserver(() => {
+      updateMinimapSize()
+      updateIndicatorPosition()
+    })
+    resizeObserver.observe(scrollContainer)
+
     return () => {
       scrollContainer.removeEventListener('scroll', updateIndicatorPosition)
       window.removeEventListener('resize', updateMinimapSize)
+      resizeObserver.disconnect()
     }
   }, [scrollContainerRef, updateMinimapSize, updateIndicatorPosition])
 
