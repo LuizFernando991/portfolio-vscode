@@ -27,44 +27,47 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-800: #101116;
-  --color-dark-700: #191A21;
-  --color-dark-600: #21222C;
-  --color-dark-500: #282A36;
-  --color-dark-400: #3d4051;
-  --color-dark-300: #44475A;
-  --color-dark-200: #505262;
-  --color-dark-100: #5A6795;
-  --color-dark-grey: #262626;
-  --color-white: #F8F8F2;
-  --color-white-75a: hsla(0,0%,100%,.75);
-  --color-white-50a: hsla(0,0%,100%,.5);
-  --color-white-10a: hsla(0,0%,100%,.1);
-  --color-white-5a: hsla(0,0%,100%,.05);
-  --color-pink: #ff79c6;
-  --color-soft-blue: #8ce1e9;
-  --color-yellow: #e7e26d;
-  --color-purple: #bd93f9;
-  --color-blue: #70a5fd;
+  /* Catppuccin Macchiato */
+  --color-dark-800: #181926; /* Crust */
+  --color-dark-700: #1e2030; /* Mantle */
+  --color-dark-600: #24273a; /* Base */
+  --color-dark-500: #363a4f; /* Surface0 */
+  --color-dark-400: #494d64; /* Surface1 */
+  --color-dark-300: #5b6078; /* Surface2 */
+  --color-dark-200: #6e738d; /* Overlay0 */
+  --color-dark-100: #8087a2; /* Overlay1 */
+  --color-dark-grey: #1e2030; /* Mantle */
+  --color-white: #cad3f5; /* Text */
+  --color-white-75a: hsla(226,58%,88%,.75);
+  --color-white-50a: hsla(226,58%,88%,.5);
+  --color-white-10a: hsla(226,58%,88%,.1);
+  --color-white-5a: hsla(226,58%,88%,.05);
+  --color-pink: #f5bde6; /* Pink */
+  --color-soft-blue: #91d7e3; /* Sky */
+  --color-yellow: #eed49f; /* Yellow */
+  --color-purple: #c6a0f6; /* Mauve */
+  --color-blue: #8aadf4; /* Blue */
+  --color-green: #a6da95; /* Green */
+  --color-red: #ed8796; /* Red */
 
   --font-sans: 'SF Pro Display', Roboto, serif, Arial;
   --font-mono: Menlo, 'Fira Mono', 'Courier New';
 } 
 
 :root {
-  --dark-700: #191A21;
-  --dark-600: #21222C;
-  --dark-500: #282A36;
-  --dark-400: #3d4051;
-  --dark-300: #44475A;
+  --dark-700: #1e2030;
+  --dark-600: #24273a;
+  --dark-500: #363a4f;
+  --dark-400: #494d64;
+  --dark-300: #5b6078;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #282A36;
-  color: #F8F8F2;
+  background: #24273a;
+  color: #cad3f5;
 }
 
 * {
@@ -85,7 +88,7 @@ body {
 }
 
 ::selection {
-  background: #505262;
+  background: #494d64;
 }
 
 @keyframes blink {

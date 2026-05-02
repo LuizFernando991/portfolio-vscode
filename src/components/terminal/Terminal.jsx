@@ -177,7 +177,7 @@ export function Terminal() {
 
         {/* Input row */}
         <div className="flex items-center gap-2 mt-1">
-          <span className="text-green-400 shrink-0 select-none text-xs">
+          <span className="text-green shrink-0 select-none text-xs">
             {PROMPT}
           </span>
           <div className="relative flex-1 flex items-center">

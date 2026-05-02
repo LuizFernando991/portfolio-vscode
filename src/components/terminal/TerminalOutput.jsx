@@ -30,7 +30,7 @@ function WelcomeOutput() {
 function CommandOutput({ text }) {
   return (
     <div className="flex items-center gap-2 text-xs">
-      <span className="text-green-400 shrink-0">{PROMPT}</span>
+      <span className="text-green shrink-0">{PROMPT}</span>
       <span className="text-white">{text}</span>
     </div>
   )
@@ -209,7 +209,7 @@ function ContactOutput({ data }) {
 function ErrorOutput({ cmd, errorKey }) {
   const { t } = useTranslation()
   return (
-    <p className="text-red-400 text-xs mt-0.5 mb-1">
+    <p className="text-red text-xs mt-0.5 mb-1">
       {t(errorKey, { cmd, defaultValue: `command not found: ${cmd}` })}
     </p>
   )
