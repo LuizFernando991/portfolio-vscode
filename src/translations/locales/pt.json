@@ -2,12 +2,20 @@
   "about": {
     "title": "Sobre",
     "title-2": "Currículo",
+    "role": "Desenvolvedor Full-stack",
+    "location": "Brasil",
+    "available": "Disponível para oportunidades",
     "p1": "Eu sou um desenvolvedor Full-stack focado no desenvolvimento de Websites e Aplicações Web, que ajudam os clientes em seu sucesso com seus empreendimentos. Confira algumas aplicações na seção de Projetos! Veja mais em ",
     "p2": "Eu também compartilho minha vida profissional com a comunidade, então sinta-se livre para me seguir no Linkedin, onde posto algumas atualizações sobre meus estudos e carreira profissional. Também posso retirar qualquer dúvida por meios dos canais de contato. Veja mais em ",
     "p3": "Estou disponível para oportunidade de trabalho onde eu possa contribuir e aprender. Se você tem uma boa oportunidade que combina com as minhas habilidades e experiências, então não exite em me contatar.",
     "p4": "Aqui você pode ver mais sobre minhas experiências:",
     "p5": "Tenho experiência em várias tecnologias e continuo sempre me atualizando e aprendendo coisas novas, para ajudar com a melhor solução possível para os problemas que aparecem. Veja as tecnologias que tenho trabalhado em  ",
-    "download-button": "[Baixar Currículo]"
+    "download-button": "[Baixar Currículo]",
+    "stats": {
+      "years": "anos de exp.",
+      "hours": "horas de código",
+      "techs": "tecnologias"
+    }
   },
   "blog": {
     "button": "Visitar Blog",
