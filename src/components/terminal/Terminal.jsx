@@ -42,7 +42,10 @@ export function Terminal() {
 
       const onMouseMove = (e) => {
         const delta = startY - e.clientY
-        const next = Math.min(Math.max(startHeight + delta, MIN_HEIGHT), maxHeight)
+        const next = Math.min(
+          Math.max(startHeight + delta, MIN_HEIGHT),
+          maxHeight
+        )
         setHeight(next)
       }
 

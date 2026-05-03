@@ -36,7 +36,7 @@ const COMMANDS = {
   })
 }
 
-export function processCommand(input, { addToHistory, clearHistory, t }) {
+export function processCommand(input, { addToHistory, clearHistory }) {
   const trimmed = input.trim()
 
   if (!trimmed) return

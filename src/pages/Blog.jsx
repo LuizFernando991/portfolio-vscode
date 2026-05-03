@@ -47,10 +47,21 @@ export function Blog() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <p className="text-xs text-white-50a mb-1">{t('blog.section-about')}</p>
-            <p className="text-white-75a text-sm leading-relaxed">{t('blog.p-1')}</p>
-            <p className="text-white-75a text-sm leading-relaxed">{t('blog.p-2')}</p>
-            <MarkdownButton as="a" href={BLOG_URL} target="_blank" rel="noreferrer">
+            <p className="text-xs text-white-50a mb-1">
+              {t('blog.section-about')}
+            </p>
+            <p className="text-white-75a text-sm leading-relaxed">
+              {t('blog.p-1')}
+            </p>
+            <p className="text-white-75a text-sm leading-relaxed">
+              {t('blog.p-2')}
+            </p>
+            <MarkdownButton
+              as="a"
+              href={BLOG_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
               [{t('blog.link-button')}]
             </MarkdownButton>
           </div>

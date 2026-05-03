@@ -10,7 +10,10 @@ const focus = [
   { label: 'Microservices', color: 'text-green border-green/30 bg-green/5' },
   { label: 'Cloud / AWS', color: 'text-yellow border-yellow/30 bg-yellow/5' },
   { label: 'Clean Architecture', color: 'text-pink border-pink/30 bg-pink/5' },
-  { label: 'API Design', color: 'text-soft-blue border-soft-blue/30 bg-soft-blue/5' }
+  {
+    label: 'API Design',
+    color: 'text-soft-blue border-soft-blue/30 bg-soft-blue/5'
+  }
 ]
 
 export function Linkedin() {
@@ -41,8 +44,12 @@ export function Linkedin() {
 
           <div className="flex flex-col gap-4">
             <p className="text-xs text-white-50a mb-1"># sobre</p>
-            <p className="text-white-75a text-sm leading-relaxed">{t('linkedin.p-1')}</p>
-            <p className="text-white-75a text-sm leading-relaxed">{t('linkedin.p-2')}</p>
+            <p className="text-white-75a text-sm leading-relaxed">
+              {t('linkedin.p-1')}
+            </p>
+            <p className="text-white-75a text-sm leading-relaxed">
+              {t('linkedin.p-2')}
+            </p>
             <MarkdownButton
               as="a"
               href="https://www.linkedin.com/in/lfernandor991/"

@@ -32,7 +32,9 @@ export function BlogPosts() {
               <span className="group-hover:underline leading-snug text-xs">
                 {t(post.titleKey)}
               </span>
-              <span className={`text-[10px] ${tagColors[post.tagKey] ?? 'text-white-50a'}`}>
+              <span
+                className={`text-[10px] ${tagColors[post.tagKey] ?? 'text-white-50a'}`}
+              >
                 {t(`blog.topics.${post.tagKey}`)}
               </span>
             </span>

@@ -85,17 +85,55 @@
     "subtitle-5": "Developer.config"
   },
   "projects": {
-    "pdfhelper": {
-      "description": "Um projeto em que o usuário pode fazer upload de arquivos pdf e analisá-los com a ajuda de inteligência artificial, por meio da integração com o GPT-chat da OpenAI. Além de possuir integração de pagamento com a plataforma STRIPE, proporcionando a possibilidade de fazer melhorias no plano atual do usuário. Você pode conferir a demo clicando no link abaixo:"
+    "title": "Projetos",
+    "subtitle": "Uma seleção de coisas que construí",
+    "status": {
+      "live": "live",
+      "in-progress": "em progresso",
+      "open-source": "open source"
     },
-    "airbnb": {
-      "description": "Um projeto full-stack, feito com Next.js 13 e Tailwind. Focado no anúncio de propriedades para aluguel assim como o airbnb. Possibilita o login com contas do Google e do Github por meio do NextAuth, além de várias funcionalidades do front-end para uma melhor experiência do usuário"
+    "streaming": {
+      "description": "Arquitetura de microsserviços para processamento e streaming de vídeo. O serviço de upload (Node.js/Express) suporta uploads multipart em chunks com retry por parte e capacidade de retomar um upload interrompido a qualquer momento — tornando-o resiliente a quedas de rede. O processamento de vídeo roda em um serviço separado em Golang, comunicando via RabbitMQ. Redis é usado para rastreamento de estado do upload.",
+      "highlights": [
+        "Upload multipart em chunks com retry por parte",
+        "Retomada de upload a partir de qualquer ponto",
+        "Serviço Golang para processamento de vídeo",
+        "RabbitMQ para comunicação entre serviços",
+        "Redis para gerenciamento de estado do upload",
+        "Stack de observabilidade com Grafana + Prometheus"
+      ]
     },
-    "tiktok": {
-      "description": "Um projeto full-stack, onde utilizo o GraphQL para construir a API em Nest.js, contendo autenticação de usuários, e todas as funcionalidades de criar posts, upload de vídeos e imagens, além da possibilidade de comentários e likes."
+    "sphera": {
+      "description": "Plataforma educacional completa para alunos que buscam estudar no exterior. Construída com escalabilidade em mente — processamento assíncrono de jobs para notificações e tarefas pesadas, cache com Redis para performance, e deploy em infraestrutura AWS.",
+      "highlights": [
+        "Sistema de acompanhamento de progresso do aluno",
+        "Filas de jobs assíncronos para processamento em background",
+        "Camada de cache com Redis",
+        "Deploy em nuvem na AWS",
+        "Arquitetura multi-tenant"
+      ]
     },
-    "instagram": {
-      "description": "Um projeto full-stack onde clono algumas funções do Instagram, sendo elas: login, registro de novas contas, stories, notificações, posts, likes e comentários, além da possíbilidade de edição de usuários e troca de imagens de perfil."
+    "vscode": {
+      "description": "Portfólio pessoal construído como uma réplica interativa do Visual Studio Code. Cada detalhe é intencional — abas arrastáveis, explorador de arquivos recolhível, minimap funcional, terminal integrado com comandos reais e atalhos de teclado.",
+      "highlights": [
+        "Barra de abas arrastáveis e fecháveis",
+        "Explorador de arquivos recolhível na sidebar",
+        "Minimap com navegação por clique",
+        "Terminal integrado com /help, /skills, /projects e mais",
+        "Ctrl+J para abrir/fechar o terminal",
+        "Bilíngue — Inglês e Português"
+      ]
+    },
+    "gorouter": {
+      "description": "API REST em Go construída do zero sem nenhum framework HTTP. O roteador é implementado manualmente usando apenas o pacote padrão net/http e expressões regulares para matching de rotas — incluindo parâmetros de path nomeados e dispatch por método. Um mergulho em como frameworks como Gin e Echo funcionam por baixo dos panos.",
+      "highlights": [
+        "Sem dependências de framework HTTP externo",
+        "Matching de rotas baseado em regex customizado",
+        "Parâmetros de path nomeados",
+        "Dispatch por método HTTP",
+        "Suporte a cadeia de middlewares",
+        "Estudo dos internos do net/http do Go"
+      ]
     }
   },
   "guide": {

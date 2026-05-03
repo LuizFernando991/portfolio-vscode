@@ -85,17 +85,55 @@
     "subtitle-5": "Developer.config"
   },
   "projects": {
-    "pdfhelper": {
-      "description": "A project where users can upload PDF files and analyze them with the assistance of artificial intelligence through integration with OpenAI's GPT-chat. Additionally, it features payment integration with the STRIPE platform, offering the option to enhance the user's current plan. You can check out the demo by clicking the link below:"
+    "title": "Projects",
+    "subtitle": "A selection of things I've built",
+    "status": {
+      "live": "live",
+      "in-progress": "in progress",
+      "open-source": "open source"
     },
-    "airbnb": {
-      "description": "A full-stack project, built with Next.js 13 and Tailwind. It focuses on property rentals similar to Airbnb. It allows login with Google and GitHub accounts through NextAuth, along with various front-end features for an enhanced user experience"
+    "streaming": {
+      "description": "Microservice architecture for video processing and streaming. The upload service (Node.js/Express) supports chunked multipart uploads with per-part retry logic and the ability to resume an interrupted upload at any point — making it resilient to network failures and crashes. Video processing runs in a separate Golang service, communicating via RabbitMQ. Redis is used for upload state tracking.",
+      "highlights": [
+        "Chunked multipart upload with retry per part",
+        "Resume upload from any point after failure",
+        "Golang service for video processing",
+        "RabbitMQ for inter-service communication",
+        "Redis for upload state management",
+        "Grafana + Prometheus observability stack"
+      ]
     },
-    "tiktok": {
-      "description": "A full-stack project where I use GraphQL to build the API in Nest.js, including user authentication and all the functionalities to create posts, upload videos and images, as well as the possibility of comments and likes."
+    "sphera": {
+      "description": "Full-featured educational platform for students seeking to study abroad. Built with scalability in mind — async job processing for notifications and heavy tasks, Redis caching for performance, and deployed on AWS infrastructure.",
+      "highlights": [
+        "Student progress tracking system",
+        "Async job queues for background processing",
+        "Redis caching layer",
+        "Cloud deployment on AWS",
+        "Multi-tenant architecture"
+      ]
     },
-    "instagram": {
-      "description": "A full-stack project where I clone some Instagram features, such as: login, new account registration, stories, notifications, posts, likes, and comments, as well as the possibility of user editing and changing profile pictures."
+    "vscode": {
+      "description": "Personal portfolio built as an interactive replica of the Visual Studio Code interface. Every detail is intentional — draggable tabs, collapsible file explorer, working minimap, integrated terminal with real commands, and keyboard shortcuts.",
+      "highlights": [
+        "Draggable and closeable tab bar",
+        "Collapsible file explorer sidebar",
+        "Scrollable minimap with click navigation",
+        "Integrated terminal with /help, /skills, /projects and more",
+        "Ctrl+J to toggle terminal",
+        "Bilingual — English and Portuguese"
+      ]
+    },
+    "gorouter": {
+      "description": "A REST API in Go built from scratch with zero HTTP frameworks. The router is implemented manually using only the standard net/http package and regular expressions for route matching — including named path parameters and method dispatching. A deep dive into how frameworks like Gin and Echo work under the hood.",
+      "highlights": [
+        "No external HTTP framework dependencies",
+        "Custom regex-based route matching",
+        "Named path parameters",
+        "HTTP method dispatching",
+        "Middleware chain support",
+        "Study of Go net/http internals"
+      ]
     }
   },
   "guide": {

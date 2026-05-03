@@ -12,7 +12,9 @@ function WelcomeOutput() {
       </p>
       <p className="text-purple text-xs">
         ║{'   '}
-        <span className="text-pink font-bold">Luiz Fernando&apos;s Portfolio</span>
+        <span className="text-pink font-bold">
+          Luiz Fernando&apos;s Portfolio
+        </span>
         {'         '}║
       </p>
       <p className="text-purple text-xs">
@@ -157,14 +159,20 @@ function ProjectsOutput({ items }) {
 
 function ContactOutput({ data }) {
   const { t } = useTranslation()
-  const socialIcons = { LinkedIn: FaLinkedin, GitHub: FaGithub, Instagram: FaInstagram }
+  const socialIcons = {
+    LinkedIn: FaLinkedin,
+    GitHub: FaGithub,
+    Instagram: FaInstagram
+  }
 
   return (
     <div className="mt-1 mb-2 text-xs space-y-1">
       <p className="text-white-75a">{t('terminal.contact.title')}</p>
       <div className="pl-2 space-y-0.5">
         <div className="flex gap-3">
-          <span className="text-yellow w-16 shrink-0">{t('terminal.contact.email')}</span>
+          <span className="text-yellow w-16 shrink-0">
+            {t('terminal.contact.email')}
+          </span>
           <a
             href={data.email.url}
             className="text-soft-blue hover:underline"
@@ -174,7 +182,9 @@ function ContactOutput({ data }) {
           </a>
         </div>
         <div className="flex gap-3">
-          <span className="text-yellow w-16 shrink-0">{t('terminal.contact.phone')}</span>
+          <span className="text-yellow w-16 shrink-0">
+            {t('terminal.contact.phone')}
+          </span>
           <a
             href={data.phone.url}
             className="text-white-50a hover:underline"
@@ -228,7 +238,12 @@ export function TerminalOutput({ entry }) {
     case 'about':
       return <AboutOutput />
     case 'skills':
-      return <SkillsOutput technologies={entry.technologies} studying={entry.studying} />
+      return (
+        <SkillsOutput
+          technologies={entry.technologies}
+          studying={entry.studying}
+        />
+      )
     case 'projects':
       return <ProjectsOutput items={entry.items} />
     case 'contact':
