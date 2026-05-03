@@ -6,7 +6,12 @@ import { useTranslation } from 'react-i18next'
 import { Minimap } from '../Minimap'
 import { MarkdownButton } from '../MarkdownButton'
 import { TechnologyItem } from './TecItem'
-import { technologyGroups, actuallyStuding } from '../../utils/technologies'
+import {
+  technologyGroups,
+  actuallyStuding,
+  devTools,
+  methodologies
+} from '../../utils/technologies'
 import classNames from 'classnames'
 
 const groupLabelColors = {
@@ -36,20 +41,25 @@ export function Technologies() {
         <Header
           headingLevel="1"
           text={t('technologies.subtitle')}
-          className="text-sm text-white-75a mb-4"
+          className="text-sm text-white-75a mb-3"
         />
-        <div className="flex flex-col gap-6">
-          {technologyGroups.map((group) => (
-            <div key={group.label}>
-              <div className="flex items-center gap-3 mb-2">
-                <span
-                  className={`text-xs font-mono px-2 py-0.5 rounded border ${groupLabelColors[group.color] ?? ''}`}
-                >
+        <div className="border border-dark-400/50 rounded-md overflow-hidden">
+          {technologyGroups.map((group, i) => (
+            <div
+              key={group.label}
+              className={i !== 0 ? 'border-t border-dark-400/50' : ''}
+            >
+              <div
+                className={`flex items-center gap-2 px-3 py-1.5 bg-dark-500/60 ${groupLabelColors[group.color] ?? ''}`}
+              >
+                <span className="text-xs font-mono font-medium">
                   {group.label}
                 </span>
-                <div className="h-px flex-1 bg-dark-400/60" />
+                <span className="text-xs font-mono opacity-50">
+                  ({group.items.length})
+                </span>
               </div>
-              <div className="grid gap-2 grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1">
                 {group.items.map((tec) => (
                   <TechnologyItem
                     Icon={tec.icon}
@@ -65,7 +75,7 @@ export function Technologies() {
       </Section>
 
       <Section>
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex items-center gap-2 mb-3">
           <Header
             headingLevel="1"
             text={t('technologies.subtitle-2')}
@@ -76,15 +86,137 @@ export function Technologies() {
             learning
           </span>
         </div>
-        <div className="grid gap-2 grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-          {actuallyStuding.map((tec) => (
-            <TechnologyItem
-              Icon={tec.icon}
-              name={tec.name}
-              key={tec.name}
-              color="yellow"
-            />
+        <div className="border border-yellow/20 rounded-md overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1">
+            {actuallyStuding.map((tec) => (
+              <TechnologyItem
+                Icon={tec.icon}
+                name={tec.name}
+                key={tec.name}
+                color="yellow"
+              />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <Header
+          headingLevel="1"
+          text={t('technologies.subtitle-3')}
+          className="text-sm text-white-75a mb-3"
+        />
+        <div className="border border-dark-400/50 rounded-md overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1">
+            {devTools.map((tool) => (
+              <TechnologyItem
+                Icon={tool.icon}
+                name={tool.name}
+                key={tool.name}
+                color="default"
+              />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <Header
+          headingLevel="1"
+          text={t('technologies.subtitle-4')}
+          className="text-sm text-white-75a mb-3"
+        />
+        <div className="flex flex-wrap gap-2">
+          {methodologies.map((label) => (
+            <span
+              key={label}
+              className="text-xs font-mono px-2.5 py-1 rounded border border-dark-400/60 bg-dark-500/40 text-white-50a hover:border-soft-blue/40 hover:text-white-75a hover:bg-soft-blue/5 transition-colors duration-150 cursor-default"
+            >
+              {label}
+            </span>
           ))}
+        </div>
+      </Section>
+
+      <Section>
+        <Header
+          headingLevel="1"
+          text={t('technologies.subtitle-5')}
+          className="text-sm text-white-75a mb-3"
+        />
+        <div className="border border-dark-400/50 rounded-md overflow-hidden">
+          <div className="flex items-center gap-1.5 px-3 py-2 bg-dark-500/80 border-b border-dark-400/50">
+            <span className="w-2.5 h-2.5 rounded-full bg-pink/60" />
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow/60" />
+            <span className="w-2.5 h-2.5 rounded-full bg-green/60" />
+            <span className="ml-2 text-xs font-mono text-white-30a">
+              developer.config.json
+            </span>
+          </div>
+          <pre className="text-xs font-mono leading-relaxed p-4 bg-dark-500/30 overflow-x-auto">
+            <code>
+              <span className="text-white-50a">{'{'}</span>
+              {'\n'}
+              {'  '}
+              <span className="text-blue">&quot;focus&quot;</span>
+              <span className="text-white-50a">: [</span>
+              <span className="text-green">&quot;backend&quot;</span>
+              <span className="text-white-50a">, </span>
+              <span className="text-green">
+                &quot;distributed systems&quot;
+              </span>
+              <span className="text-white-50a">, </span>
+              <span className="text-green">&quot;APIs&quot;</span>
+              <span className="text-white-50a">],</span>
+              {'\n'}
+              {'  '}
+              <span className="text-blue">&quot;preferredStack&quot;</span>
+              <span className="text-white-50a">: [</span>
+              <span className="text-green">&quot;TypeScript&quot;</span>
+              <span className="text-white-50a">, </span>
+              <span className="text-green">&quot;Node.js&quot;</span>
+              <span className="text-white-50a">, </span>
+              <span className="text-green">&quot;Golang&quot;</span>
+              <span className="text-white-50a">],</span>
+              {'\n'}
+              {'  '}
+              <span className="text-blue">&quot;yearsOfExperience&quot;</span>
+              <span className="text-white-50a">: </span>
+              <span className="text-purple">+3</span>
+              <span className="text-white-50a">,</span>
+              {'\n'}
+              {'  '}
+              <span className="text-blue">&quot;openToWork&quot;</span>
+              <span className="text-white-50a">: </span>
+              <span className="text-yellow">true</span>
+              <span className="text-white-50a">,</span>
+              {'\n'}
+              {'  '}
+              <span className="text-blue">&quot;workStyle&quot;</span>
+              <span className="text-white-50a">: [</span>
+              <span className="text-green">&quot;remote&quot;</span>
+              <span className="text-white-50a">, </span>
+              <span className="text-green">&quot;async&quot;</span>
+              <span className="text-white-50a">, </span>
+              <span className="text-green">&quot;collaborative&quot;</span>
+              <span className="text-white-50a">],</span>
+              {'\n'}
+              {'  '}
+              <span className="text-blue">&quot;currentlyBuilding&quot;</span>
+              <span className="text-white-50a">: </span>
+              <span className="text-green">
+                &quot;scalable backend systems&quot;
+              </span>
+              <span className="text-white-50a">,</span>
+              {'\n'}
+              {'  '}
+              <span className="text-blue">&quot;alwaysLearning&quot;</span>
+              <span className="text-white-50a">: </span>
+              <span className="text-yellow">true</span>
+              {'\n'}
+              <span className="text-white-50a">{'}'}</span>
+            </code>
+          </pre>
         </div>
       </Section>
 
@@ -97,16 +229,31 @@ export function Technologies() {
         <Header
           headingLevel="1"
           text={t('technologies.github')}
-          className="text-sm text-white-75a"
+          className="text-sm text-white-75a mb-3"
         />
-        <MarkdownButton
-          as="a"
+        <a
           href="https://github.com/LuizFernando991"
           target="_blank"
           rel="noreferrer"
+          className="group flex items-center gap-4 p-4 border border-dark-400/50 rounded-md bg-dark-500/30 hover:border-soft-blue/40 hover:bg-dark-400/30 transition-all duration-150 w-fit"
         >
-          [GitHub]
-        </MarkdownButton>
+          <img
+            src="https://avatars.githubusercontent.com/LuizFernando991"
+            alt="GitHub avatar"
+            className="w-12 h-12 rounded-full border border-dark-400/60 group-hover:border-soft-blue/40 transition-colors duration-150"
+          />
+          <div className="flex flex-col gap-0.5">
+            <span className="text-sm font-mono text-white-75a group-hover:text-white transition-colors duration-150">
+              LuizFernando991
+            </span>
+            <span className="text-xs font-mono text-white-30a">
+              github.com/LuizFernando991
+            </span>
+          </div>
+          <MarkdownButton as="span" className="ml-2">
+            [open]
+          </MarkdownButton>
+        </a>
       </Section>
     </div>
   )

@@ -20,8 +20,14 @@ import {
   SiTerraform,
   SiDrizzle,
   SiApachekafka,
-  SiSwagger
+  SiSwagger,
+  SiLinux,
+  SiGithub,
+  SiPostman,
+  SiInsomnia,
+  SiGithubactions
 } from 'react-icons/si'
+import { VscVscode } from 'react-icons/vsc'
 import { FaNode } from 'react-icons/fa'
 import { FaGolang } from 'react-icons/fa6'
 import { DiRedis, DiPostgresql } from 'react-icons/di'
@@ -115,4 +121,26 @@ export const actuallyStuding = [
   { name: 'Terraform', icon: SiTerraform },
   { name: 'Kubernetes', icon: AiOutlineKubernetes },
   { name: 'Kafka', icon: SiApachekafka }
+]
+
+export const devTools = [
+  { name: 'VS Code', icon: VscVscode },
+  { name: 'Linux', icon: SiLinux },
+  { name: 'GitHub', icon: SiGithub },
+  { name: 'GitHub Actions', icon: SiGithubactions },
+  { name: 'Postman', icon: SiPostman },
+  { name: 'Insomnia', icon: SiInsomnia },
+  { name: 'Docker', icon: SiDocker },
+  { name: 'Git', icon: SiGit }
+]
+
+export const methodologies = [
+  'REST API',
+  'Microservices',
+  'Clean Architecture',
+  'CI/CD',
+  'Monorepo',
+  'Event-Driven',
+  'SOLID',
+  'Design Patterns'
 ]

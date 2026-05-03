@@ -70,7 +70,11 @@
     "title": "My Technologies",
     "subtitle": "Technologies I master",
     "subtitle-2": "I'm studying",
-    "github": "Check out my GitHub for more details"
+    "subtitle-3": "Tools & environment",
+    "subtitle-4": "Methodologies & practices",
+    "github": "Check out my GitHub for more details",
+    "github-stats": "GitHub stats",
+    "subtitle-5": "Developer.config"
   },
   "projects": {
     "pdfhelper": {
