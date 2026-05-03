@@ -12,7 +12,7 @@ const topics = [
   { key: 'career', color: 'text-soft-blue border-soft-blue/30 bg-soft-blue/5' }
 ]
 
-const BLOG_URL = 'https://dev.to/luizfernando991'
+const BLOG_URL = 'https://site.devluizfernando.com.br/blog'
 
 export function Blog() {
   const { t } = useTranslation()
