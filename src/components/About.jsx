@@ -55,7 +55,6 @@ export function About() {
 
   const component = (animate = false) => (
     <div className="relative grow max-w-[1200px] z-10 pt-2">
-
       <Section>
         <div className="flex flex-col sm:flex-row gap-5 items-start">
           <img
@@ -71,7 +70,9 @@ export function About() {
                 className="text-3xl md:text-4xl text-purple"
               />
               {animate && (
-                <span className="animate-blink text-white-75a text-[1.3rem]">|</span>
+                <span className="animate-blink text-white-75a text-[1.3rem]">
+                  |
+                </span>
               )}
             </div>
             <span className="text-sm font-mono text-soft-blue">
@@ -112,8 +113,12 @@ export function About() {
               key={label}
               className="flex flex-col items-center gap-0.5 py-3 border border-dark-400/50 rounded-md bg-dark-500/30"
             >
-              <span className="text-xl font-mono font-bold text-soft-blue">{value}</span>
-              <span className="text-xs font-mono text-white-30a text-center">{label}</span>
+              <span className="text-xl font-mono font-bold text-soft-blue">
+                {value}
+              </span>
+              <span className="text-xs font-mono text-white-30a text-center">
+                {label}
+              </span>
             </div>
           ))}
         </div>
