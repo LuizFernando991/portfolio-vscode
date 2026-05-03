@@ -9,12 +9,39 @@
     "p5": "I have experience with various technologies and I am always updating myself and learning new things to help provide the best possible solution for the problems that arise. Check out the technologies I have been working with on ",
     "download-button": "[Download Resume]"
   },
+  "blog": {
+    "button": "Visit Blog",
+    "subtitle": "Studies, curiosities and technologies",
+    "link-button": "Visit My Blog",
+    "section-topics": "# topics",
+    "section-about": "# about",
+    "recent-posts": "Recent Posts",
+    "p-1": "On my blog I share articles about the technologies I study and use on a daily basis, such as TypeScript, Node.js, software architecture, DevOps and more. The goal is to document my learning and contribute to the dev community, bringing practical and straight-to-the-point content.",
+    "p-2": "You will also find curiosities about the world of technology, career tips and reflections on the process of evolving as a developer. If you enjoy technical content with a touch of real experience, feel free to explore!",
+    "topics": {
+      "typescript": "TypeScript",
+      "nodejs": "Node.js",
+      "architecture": "Architecture",
+      "devops": "DevOps",
+      "curiosities": "Curiosities",
+      "career": "Career",
+      "nestjs": "NestJS"
+    },
+    "posts": {
+      "event-loop": "Understanding the Event Loop in Node.js",
+      "typescript-advanced": "TypeScript: advanced types in practice",
+      "clean-architecture": "Clean Architecture in REST APIs",
+      "docker": "Docker from scratch for backend devs",
+      "microservices": "Microservices with NestJS and RabbitMQ"
+    }
+  },
   "tabs": {
     "About": "About",
     "Projects": "Projects",
     "Technologies": "Technologies",
     "Home": "Home",
     "Contact": "Contact",
+    "Blog": "Blog",
     "index": "index",
     "components": "components",
     "src": "src",

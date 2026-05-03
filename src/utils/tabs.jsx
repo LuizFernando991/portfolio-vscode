@@ -4,7 +4,6 @@ import { Guide } from '../components/Guide'
 import { Home } from '../components/Home'
 import { Projects } from '../components/projects/Projects'
 import { Technologies } from '../components/technologies/Technologies'
-
 export const tabsContent = {
   home: { name: 'Home', type: 'file', extension: 'js', component: <Home /> },
   about: { name: 'About', type: 'file', extension: 'js', component: <About /> },

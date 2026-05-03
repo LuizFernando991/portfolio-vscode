@@ -26,7 +26,7 @@ export function Guide() {
           <MarkdownButton
             as="a"
             target="_blank"
-            href="https://luizfernandodev.netlify.app"
+            href="https://site.devluizfernando.com.br/"
           >
             My website
           </MarkdownButton>
