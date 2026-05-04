@@ -40,7 +40,7 @@ export function Projects() {
   return (
     <div
       ref={containerRef}
-      className="px-2 md:pl-10 md:px-0 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-hidden"
+      className="px-2 md:pl-10 md:px-0 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-x-hidden"
     >
       {renderComponent}
       <div

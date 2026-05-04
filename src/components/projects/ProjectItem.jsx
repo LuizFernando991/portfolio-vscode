@@ -30,8 +30,8 @@ export function ProjectItem({
   return (
     <article className="border border-dark-400/50 rounded-md overflow-hidden bg-dark-500/20 hover:border-dark-400/80 transition-colors duration-200">
       {/* header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-dark-400/50 bg-dark-500/50">
-        <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 py-3 border-b border-dark-400/50 bg-dark-500/50">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 min-w-0">
           <span className="text-base font-mono font-semibold text-white-75a">
             #{title}
           </span>
@@ -44,7 +44,7 @@ export function ProjectItem({
             {t(`projects.status.${status}`)}
           </span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {githubLink && (
             <a
               href={githubLink}

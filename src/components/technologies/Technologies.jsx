@@ -30,7 +30,7 @@ export function Technologies() {
   const isBiggerThanLgBreakPoint = isBreakpoint('lg')
 
   const component = () => (
-    <div className="relative grow max-w-[900px] z-10 pt-2">
+    <div className="relative grow w-full min-w-0 max-w-[900px] z-10 pt-2">
       <Header
         headingLevel="1"
         text={t('technologies.title')}
@@ -43,7 +43,7 @@ export function Technologies() {
           text={t('technologies.subtitle')}
           className="text-sm text-white-75a mb-3"
         />
-        <div className="border border-dark-400/50 rounded-md overflow-hidden">
+        <div className="w-full min-w-0 border border-dark-400/50 rounded-md overflow-hidden">
           {technologyGroups.map((group, i) => (
             <div
               key={group.label}
@@ -59,7 +59,7 @@ export function Technologies() {
                   ({group.items.length})
                 </span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1 [&>*]:min-w-0">
                 {group.items.map((tec) => (
                   <TechnologyItem
                     Icon={tec.icon}
@@ -86,8 +86,8 @@ export function Technologies() {
             learning
           </span>
         </div>
-        <div className="border border-yellow/20 rounded-md overflow-hidden">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1">
+        <div className="w-full min-w-0 border border-yellow/20 rounded-md overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1 [&>*]:min-w-0">
             {actuallyStuding.map((tec) => (
               <TechnologyItem
                 Icon={tec.icon}
@@ -106,8 +106,8 @@ export function Technologies() {
           text={t('technologies.subtitle-3')}
           className="text-sm text-white-75a mb-3"
         />
-        <div className="border border-dark-400/50 rounded-md overflow-hidden">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1">
+        <div className="w-full min-w-0 border border-dark-400/50 rounded-md overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-1 py-1 [&>*]:min-w-0">
             {devTools.map((tool) => (
               <TechnologyItem
                 Icon={tool.icon}
@@ -235,7 +235,7 @@ export function Technologies() {
           href="https://github.com/LuizFernando991"
           target="_blank"
           rel="noreferrer"
-          className="group flex items-center gap-4 p-4 border border-dark-400/50 rounded-md bg-dark-500/30 hover:border-soft-blue/40 hover:bg-dark-400/30 transition-all duration-150 w-fit"
+          className="group flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-4 p-4 border border-dark-400/50 rounded-md bg-dark-500/30 hover:border-soft-blue/40 hover:bg-dark-400/30 transition-all duration-150 w-full sm:w-fit"
         >
           <img
             src="https://avatars.githubusercontent.com/LuizFernando991"
@@ -246,11 +246,11 @@ export function Technologies() {
             <span className="text-sm font-mono text-white-75a group-hover:text-white transition-colors duration-150">
               LuizFernando991
             </span>
-            <span className="text-xs font-mono text-white-30a">
+            <span className="text-xs font-mono text-white-30a break-all">
               github.com/LuizFernando991
             </span>
           </div>
-          <MarkdownButton as="span" className="ml-2">
+          <MarkdownButton as="span" className="sm:ml-2">
             [open]
           </MarkdownButton>
         </a>
@@ -262,7 +262,7 @@ export function Technologies() {
   return (
     <div
       ref={containerRef}
-      className="px-2 md:pl-10 md:px-0 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-hidden font-mono"
+      className="px-2 md:pl-10 md:px-0 pb-10 flex w-full justify-between gap-1 overflow-y-auto overflow-x-hidden font-mono"
     >
       {renderComponent}
       <div
